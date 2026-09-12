@@ -222,7 +222,6 @@ function initHeroZoomScroll() {
     const sai = clamp((progress - 0.80) / 0.14);
     const reveal = reducedMotion.matches ? 1 : entra * (1 - sai);
     situations.style.opacity = reveal;
-    situations.style.transform = reducedMotion.matches ? 'none' : `translateY(${(1 - reveal) * 28}px)`;
     situations.style.visibility = reveal < 0.01 ? 'hidden' : 'visible';
     situations.inert = reveal < 0.5;
     situations.setAttribute('aria-hidden', String(reveal < 0.5));

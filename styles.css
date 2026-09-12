@@ -51,7 +51,7 @@ html {
 
 body {
   background: radial-gradient(circle at 50% 0%, #111d27 0%, var(--bg-dark) 70%);
-  min-height: 100vh;
+  min-height: 100dvh;
   position: relative;
 }
 
@@ -250,13 +250,14 @@ button, input, select {
 /* --- BLOCO 1: HERO & TELA DE BLOQUEIO (LOGO ZOOM-IN PORTAL) --- */
 #hero-pin-wrapper {
   position: relative;
-  height: 250vh; /* Scroll track distance for deep zoom animation */
+  height: 250dvh; /* Scroll track distance for deep zoom animation */
 }
 
+/* 4.1 Fixed Wrapper for the animation */
 .hero-wrapper {
   position: sticky;
   top: 0;
-  height: 100vh;
+  height: 100dvh;
   width: 100%;
   overflow: hidden;
 }
@@ -1297,6 +1298,10 @@ button, input, select {
   .nav-links {
     display: none;
   }
+
+  .hero-img-col {
+    display: none;
+  }
 }
 
 @media (max-width: 600px) {
@@ -1304,12 +1309,22 @@ button, input, select {
     padding: 60px 0;
   }
 
+  .container {
+    width: 92%;
+  }
+
+  .hero-headline-screen {
+    padding: 60px 0 20px;
+  }
+
   .hero-cta-group {
     flex-direction: column;
+    gap: 16px;
   }
 
   .btn-cta-gold, .btn-cta-outline {
     width: 100%;
+    text-align: center;
   }
 
   .metrics-grid {
@@ -1551,7 +1566,7 @@ button, input, select {
 .hero-price { color: var(--text-muted); margin: 0 0 24px; line-height: 1.65; }
 .hero-price strong { color: var(--text-main); }
 .hero-situations { position: absolute; inset: 0; z-index: 15; display: flex; align-items: center; padding: 90px 0 50px; background-color: var(--bg-dark); opacity: 0; visibility: hidden; will-change: opacity, transform; }
-.situations-list { display: grid; gap: clamp(22px, 4vh, 42px); }
+.situations-list { display: grid; gap: clamp(22px, 4dvh, 42px); }
 .situation { border-left: 2px solid var(--gold-primary); padding-left: 24px; }
 .situation h2 { font-family: var(--font-display); font-size: clamp(1.35rem, 3.4vw, 2.8rem); line-height: 1.15; margin-bottom: 10px; }
 .situation p { color: var(--gold-bright); font-size: clamp(1rem, 1.7vw, 1.3rem); }
@@ -1591,7 +1606,7 @@ a:focus-visible, summary:focus-visible { outline: 2px solid var(--gold-bright); 
   html { scroll-behavior: auto; }
   #hero-pin-wrapper { height: auto; }
   .hero-wrapper { position: relative; height: auto; overflow: visible; }
-  .hero-lock-screen, .hero-situations { position: relative; min-height: 70vh; opacity: 1 !important; visibility: visible !important; transform: none !important; }
+  .hero-lock-screen, .hero-situations { position: relative; min-height: 70dvh; opacity: 1 !important; visibility: visible !important; transform: none !important; }
   .emblem-aura, .glow-bg-radial, .mouse-wheel { animation: none; }
   .scroll-indicator { display: none; }
 }
@@ -1857,10 +1872,10 @@ a:focus-visible, summary:focus-visible { outline: 2px solid var(--gold-bright); 
 
 /* Abaixo de 900px não cabe coluna: a foto vira faixa acima dos textos. */
 @media (max-width: 900px) {
-  .situations-grid { grid-template-columns: 1fr; gap: 20px; }
-  .situations-foto { order: -1; }
-  .situations-foto img { aspect-ratio: auto; height: clamp(92px, 13vh, 150px); }
-  .situations-foto figcaption { display: none; }
+  .situations-grid { grid-template-columns: 1fr; gap: 40px; }
+  /* Removido o order: -1 e os limites de proporção para que a imagem apareça naturalmente embaixo e completa */
+  .situations-foto { aspect-ratio: auto; max-height: none; }
+  .situations-foto img { aspect-ratio: auto; object-position: center; }
 }
 
 /* --- 12. Zoom simultâneo nas quatro fotos da carta -------------------- */
