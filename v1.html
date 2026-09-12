@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Academia Polímatas — Desenvolva Múltiplas Habilidades</title>
+  <meta name="description" content="Várias habilidades num lugar só, porque a vida nunca cobrou de você uma habilidade de cada vez. Acompanhe as temporadas de treino de Júlio César.">
+  
+  <!-- Google Fonts: Display (Bricolage Grotesque) + Texto (Instrument Sans) + Dados (JetBrains Mono) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  
+  <script>
+    /* A camada de animação esconde conteúdo para revelá-lo ao rolar. Se o JS
+       que revela não assumir — script antigo em cache, erro, bloqueio — a
+       página ficaria em branco. Esta classe só permanece se main.js confirmar
+       que assumiu; caso contrário cai em 2,5s e tudo volta a aparecer. */
+    document.documentElement.classList.add('anim-on');
+    setTimeout(function () {
+      if (!window.__animacaoAtiva) document.documentElement.classList.remove('anim-on');
+    }, 2500);
+  </script>
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+  <!-- Sem JS as revelações nunca recebem a classe: o conteúdo apareceria
+       vazio. Este bloco devolve tudo visível, inclusive o FAQ. -->
+  <noscript><style>
+    [data-reveal] { opacity: 1 !important; transform: none !important; }
+    .underline-draw::after { transform: scaleX(1) !important; }
+    .lesson-sprout { opacity: 1 !important; }
+  </style></noscript>
+  <link rel="stylesheet" href="styles.css?v=20260912-cards">
+</head>
+<body>
+
+  <!-- Floating Navigation Bar -->
+  <header id="main-header" class="site-header hidden-header">
+    <div class="header-container">
+      <a href="#hero-pin-wrapper" class="brand-logo">
+        <svg class="mini-emblem-svg" viewBox="0 0 100 100" fill="none">
+          <circle cx="50" cy="50" r="42" stroke="url(#goldGradMini)" stroke-width="2.5"/>
+          <path d="M50 15 L78 80 L22 80 Z" stroke="url(#goldGradMini)" stroke-width="2.5" fill="none"/>
+          <circle cx="50" cy="50" r="14" stroke="url(#goldGradMini)" stroke-width="2.5"/>
+          <defs>
+            <linearGradient id="goldGradMini" x1="0" y1="0" x2="100" y2="100" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#d4a63a"/>
+              <stop offset="100%" stop-color="#f0c85a"/>
+            </linearGradient>
+          </defs>
+        </svg>
+        <span>ACADEMIA POLÍMATAS</span>
+      </a>
+      <nav class="nav-links">
+        <a href="#topicos-grafo">Tópicos</a>
+        <a href="#temporadas">Temporadas</a>
+        <a href="#pratica-real">Prática Real</a>
+        <a href="#sobre-julio">Sobre</a>
+      </nav>
+      <a class="btn-cta-gold btn-sm" id="nav-cta-btn" href="https://pay.kiwify.com.br/OizrzJd">Entrar na Academia</a>
+    </div>
+  </header>
+
+  <!-- BLOCO 1: HERO PINNED (TELA DE ABERTURA COM PORTAL DO LOGO & FRASE) -->
+  <div id="hero-pin-wrapper">
+    <section id="hero-section" class="hero-wrapper">
+      <!-- Dobra 1: Tela de Bloqueio (Logo Zoom-In Portal & Text Fade Out) -->
+      <div id="hero-lock" class="hero-lock-screen">
+        <div class="glow-bg-radial"></div>
+        
+        <!-- Text Group (Fades out quickly) -->
+        <div class="lock-text-group" id="lock-text-group">
+          <div class="lock-brand-name">ACADEMIA POLÍMATAS</div>
+          <p class="lock-quote-phrase">
+            "Várias habilidades num lugar só, porque a vida nunca cobrou de você uma habilidade de cada vez."
+          </p>
+        </div>
+
+        <!-- Emblem Container (Zooms massive until vanishing) -->
+        <div class="emblem-container" id="emblem-portal-box">
+          <div class="emblem-aura"></div>
+          <svg class="main-emblem-svg" viewBox="0 0 200 200" fill="none">
+            <circle cx="100" cy="100" r="88" stroke="url(#goldGradMaster)" stroke-width="2" opacity="0.6"/>
+            <circle cx="100" cy="100" r="80" stroke="url(#goldGradMaster)" stroke-width="1.5" stroke-dasharray="6 6" opacity="0.4"/>
+            <polygon points="100,25 165,150 35,150" stroke="url(#goldGradMaster)" stroke-width="3" fill="rgba(212, 166, 58, 0.03)"/>
+            <polygon points="100,175 35,50 165,50" stroke="url(#goldGradMaster)" stroke-width="1.5" opacity="0.5" fill="none"/>
+            <circle cx="100" cy="100" r="30" stroke="url(#goldGradMaster)" stroke-width="2.5" fill="rgba(10, 15, 20, 0.8)"/>
+            <circle cx="100" cy="100" r="8" fill="url(#goldGradMaster)"/>
+            <line x1="100" y1="12" x2="100" y2="188" stroke="url(#goldGradMaster)" stroke-width="1" opacity="0.3"/>
+            <line x1="12" y1="100" x2="188" y2="100" stroke="url(#goldGradMaster)" stroke-width="1" opacity="0.3"/>
+            <defs>
+              <linearGradient id="goldGradMaster" x1="0" y1="0" x2="200" y2="200" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#d4a63a"/>
+                <stop offset="50%" stop-color="#f7d774"/>
+                <stop offset="100%" stop-color="#b8860b"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+
+        <div class="scroll-indicator" id="scroll-trigger">
+          <span class="scroll-label">ROLE PARA EXPLORAR</span>
+          <div class="mouse-icon">
+            <div class="mouse-wheel"></div>
+          </div>
+        </div>
+      </div>
+
+      <div id="hero-situations" class="hero-situations" aria-hidden="true" inert>
+        <div class="container situations-grid">
+          <div class="situations-col">
+            <p class="eyebrow-tag" data-reveal="up">NA VIDA, AS HABILIDADES SE ENCONTRAM</p>
+            <div class="situations-list">
+              <div class="situation" data-reveal="up" style="--delay:0ms"><svg class="situation-glyph" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path pathLength="100" d="M5 8c4-2 8-2 11 1 3-3 7-3 11-1v16c-4-2-8-2-11 1-3-3-7-3-11-1V8Z"/><path pathLength="100" d="M16 9v16"/></svg><h2>Precisa aprender algo?</h2><p>Aprendizagem, memória e prática.</p></div>
+              <div class="situation" data-reveal="up" style="--delay:130ms"><svg class="situation-glyph" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path pathLength="100" d="M16 4a8 8 0 0 0-5 14v3h10v-3a8 8 0 0 0-5-14Z"/><path pathLength="100" d="M13 25h6M14 28h4"/></svg><h2>Precisa apresentar uma ideia?</h2><p>Comunicação, repertório e clareza.</p></div>
+              <div class="situation" data-reveal="up" style="--delay:260ms"><svg class="situation-glyph" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path pathLength="100" d="M7 27V7h11l5 5v6"/><path pathLength="100" d="M18 7v5h5"/><path pathLength="100" d="M17 24h10m0 0-4-4m4 4-4 4"/></svg><h2>Precisa tirar um projeto do papel?</h2><p>Visão, rotina e execução.</p></div>
+            </div>
+            <a href="#hero-headline" class="situations-next">Conheça a Academia &darr;</a>
+          </div>
+
+          <figure class="situations-foto" data-reveal="up" style="--delay:200ms" data-mouse-zoom>
+            <img src="midia/trote-medicina.jpg" alt="Júlio César no trote, após a aprovação em cinco vestibulares de medicina">
+            <figcaption>Trote, depois da aprovação em medicina.</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <!-- Dobra 2: Headline Real (Fullstack Photo Careca 5 Vestibulares) -->
+      <div id="hero-headline" class="hero-headline-screen">
+        <div class="container">
+          <div class="hero-headline-grid">
+            <!-- Left Text Column -->
+            <div class="hero-text-col">
+              <div class="eyebrow-tag">CENTRO DE TREINAMENTO INTEGRAL</div>
+              <h1 class="main-headline" data-typewrite>Seja bem-vindo à <span class="text-gold-serif">Academia Polímatas</span>.</h1>
+              <p class="subheadline">
+                Várias habilidades num lugar só, <strong class="text-gold-bold">porque a vida nunca cobrou de você uma habilidade de cada vez.</strong>
+              </p>
+              <p class="hero-price"><strong>R$ 30/mês</strong> · Acesso ao acervo disponível e às novas aulas durante a assinatura.</p>
+              <div class="hero-cta-group">
+                <a href="#temporadas" class="btn-cta-gold" id="hero-ver-temporadas-btn">Ver Temporadas</a>
+                <a class="btn-cta-outline" id="hero-entrar-btn" href="https://pay.kiwify.com.br/OizrzJd">Entrar na Academia</a>
+              </div>
+            </div>
+
+            <!-- Right Hero Photo (Careca MED 5/5+2) -->
+            <div class="hero-img-col">
+              <div class="hero-fullstack-card hero-emblem-card">
+                <div class="hero-card-glow"></div>
+                <div class="emblem-stage" role="img" aria-label="Emblema da Academia Polímatas">
+                  <svg class="emblem-spin" viewBox="0 0 200 200" fill="none" aria-hidden="true">
+                    <g class="emblem-turn">
+                      <circle cx="100" cy="100" r="88" stroke="url(#goldGradHero)" stroke-width="2" opacity="0.6"/>
+                      <circle class="emblem-dash" cx="100" cy="100" r="80" stroke="url(#goldGradHero)" stroke-width="1.5" stroke-dasharray="6 6" opacity="0.4"/>
+                      <polygon points="100,25 165,150 35,150" stroke="url(#goldGradHero)" stroke-width="3" fill="rgba(212, 166, 58, 0.03)"/>
+                      <polygon points="100,175 35,50 165,50" stroke="url(#goldGradHero)" stroke-width="1.5" opacity="0.5" fill="none"/>
+                      <circle cx="100" cy="100" r="30" stroke="url(#goldGradHero)" stroke-width="2.5" fill="rgba(10, 15, 20, 0.8)"/>
+                      <circle class="emblem-core" cx="100" cy="100" r="8" fill="url(#goldGradHero)"/>
+                      <line x1="100" y1="12" x2="100" y2="188" stroke="url(#goldGradHero)" stroke-width="1" opacity="0.3"/>
+                      <line x1="12" y1="100" x2="188" y2="100" stroke="url(#goldGradHero)" stroke-width="1" opacity="0.3"/>
+                    </g>
+                    <defs>
+                      <linearGradient id="goldGradHero" x1="0" y1="0" x2="200" y2="200" gradientUnits="userSpaceOnUse">
+                        <stop offset="0%" stop-color="#d4a63a"/>
+                        <stop offset="50%" stop-color="#f7d774"/>
+                        <stop offset="100%" stop-color="#b8860b"/>
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                </div>
+                <div class="hero-card-tag">
+                  <span class="tag-name">Academia Polímatas</span>
+                  <span class="tag-desc">Centro de treinamento integral</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <section id="amostra-aulas" class="section-padding sample-section" aria-labelledby="sample-title">
+    <div class="container sample-container">
+      <div class="section-header text-center" data-reveal="up">
+        <span class="eyebrow-tag">POR DENTRO DAS AULAS</span>
+        <h2 id="sample-title" class="section-title">Conhecimento que encontra <span class="text-gold-serif underline-draw" data-reveal="sublinhar">a vida real.</span></h2>
+        <p class="section-desc">Como decidir entre duas opções. Como lembrar do que você aprende. Como enxergar a fase que você está vivendo. Três trechos reais, de três aulas diferentes, do jeito que a Academia é.</p>
+      </div>
+      <figure class="sample-film" data-sample-film>
+        <div class="sample-stage">
+          <video playsinline muted preload="none" poster="midia/amostra-capa.jpg" aria-label="Amostra de aulas da Academia Polímatas">
+            <source src="midia/amostra-academia.mp4" type="video/mp4">
+            <track kind="captions" src="midia/amostra-academia.pt.vtt" srclang="pt" label="Português">
+            Seu navegador não reproduz este vídeo. <a href="midia/amostra-academia.mp4">Abra a amostra de aulas.</a>
+          </video>
+          <button type="button" class="sample-start" data-sample-start>
+            <span class="sample-start__mark" aria-hidden="true">
+              <svg viewBox="0 0 64 64" fill="none" aria-hidden="true">
+                <circle cx="32" cy="32" r="30" stroke="currentColor" stroke-width="2"/>
+                <path d="M26 21 L44 32 L26 43 Z" fill="currentColor"/>
+              </svg>
+            </span>
+            <span class="sample-start__texto">Clique aqui para ver o vídeo do início</span>
+          </button>
+        </div>
+        <figcaption><span>Três aulas, três ideias</span><span data-sample-duracao>com legendas</span></figcaption>
+      </figure>
+      <div class="sample-action">
+        <p><strong>Experimente agora:</strong> escreva as duas opções de uma decisão sua, com os prós que você quer e os contras que aceita assumir. É a primeira das três ideias do vídeo — e dá para fazer hoje.</p>
+        <a class="btn-cta-gold" href="https://pay.kiwify.com.br/OizrzJd">Entrar na Academia — R$ 30/mês</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOCO 2: NUVEM DE TÓPICOS (Grafo Obsidian Interconectado) -->
+  <section id="topicos-grafo" class="section-padding graph-section">
+    <div class="container">
+      <div class="section-header text-center" data-reveal="up">
+        <span class="eyebrow-tag">REDE DE CONHECIMENTO INTERCONECTADA</span>
+        <h2 class="section-title">O que você vai encontrar <span class="text-gold-serif">aqui dentro</span></h2>
+        <p class="section-desc">
+          Cada ponto é uma aula. Cada linha é uma ligação real entre assuntos — porque nenhuma habilidade vive sozinha, e é assim que o acervo foi construído.
+        </p>
+        <p class="section-desc graph-instructions">
+          <strong>Arraste qualquer ponto</strong> (experimente <strong>Crise existencial</strong>) para ver as conexões sendo puxadas em tempo real.
+          <strong>Clique em um ponto para ir direto à aula.</strong>
+        </p>
+      </div>
+
+      <div class="graph-canvas-wrapper">
+        <canvas id="obsidian-canvas"></canvas>
+        <div class="graph-overlay-hint">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5"/></svg>
+          <span>Arraste para movimentar • Clique para abrir a aula</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOCO 3: AS TEMPORADAS (Com Botão "Ver Mais") -->
+  <section id="documentacao-real" class="section-padding doc-section">
+    <div class="container">
+      <div class="section-header text-center" data-reveal="up">
+        <span class="eyebrow-tag">DOCUMENTAÇÃO REAL</span>
+        <h2 class="section-title">O que existe <span class="text-gold-serif">hoje, agora</span></h2>
+        <p class="section-desc">
+          Números exatos, conferidos. O que está gravado está gravado; o que está planejado
+          aparece marcado como planejado. Você não vai descobrir a diferença depois de pagar.
+        </p>
+      </div>
+
+      <div class="doc-grid">
+        <div class="doc-card" data-reveal="up" style="--delay:0ms">
+          <span class="doc-number" data-count="52">0</span>
+          <h4>aulas gravadas</h4>
+          <p>25 da Temporada 0, 13 da Temporada 1 e 14 aulas lineares. Todas disponíveis desde o primeiro dia.</p>
+        </div>
+        <div class="doc-card" data-reveal="up" style="--delay:90ms">
+          <span class="doc-number" data-count="73">0</span>
+          <h4>aulas planejadas</h4>
+          <p>O mapa das Temporadas 2 e 3, e o restante da 1. Estão no site marcadas como planejadas — porque ainda são.</p>
+        </div>
+        <div class="doc-card doc-card-wide" data-reveal="up" style="--delay:180ms">
+          <span class="doc-number"><span data-count="5">0</span><span class="doc-den">/16</span></span>
+          <h4>semanas do desafio, em tempo real</h4>
+          <p>
+            O Estudo de Caso não é depoimento: sou eu aplicando o protocolo de 16 semanas em mim mesmo,
+            gravando toda semana o que funcionou e o que não funcionou. Começou em 09/08/2026 e termina em
+            28/11/2026. <strong>Ainda não sei o resultado</strong> — e é exatamente por isso que vale assistir.
+          </p>
+        </div>
+      </div>
+
+      <div class="doc-notes">
+        <div class="doc-note">
+          <h5>Duas pedagogias, de propósito</h5>
+          <p>
+            As <strong>aulas lineares</strong> são roteirizadas e ensinam algo objetivo, do começo ao fim.
+            As <strong>aulas de temporada</strong> são abertas e filosóficas — às vezes explicam algo concreto,
+            mas sempre com uma ideia por trás. Você precisa das duas: uma te dá o método, a outra te dá o porquê.
+          </p>
+        </div>
+        <div class="doc-note">
+          <h5>Como funciona o acesso</h5>
+          <p>
+            <strong>R$ 30 por mês.</strong> Todas as aulas liberadas de uma vez, sem gotejamento e sem trilha
+            obrigatória. Aula nova entra no acervo e você já tem. Sem contrato de permanência.
+          </p>
+        </div>
+      </div>
+      <div class="purchase-cta">
+        <a class="btn-cta-gold" href="https://pay.kiwify.com.br/OizrzJd">Entrar na Academia</a>
+        <p class="closing-subnote">R$ 30 por mês · Acesso às aulas já disponíveis.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="temporadas" class="section-padding seasons-section">
+    <div class="container">
+      <div class="section-header" data-reveal="up">
+        <span class="eyebrow-tag">CENTRO DE TREINO EM TEMPO REAL</span>
+        <h2 class="section-title">As <span class="text-gold-serif">Temporadas</span></h2>
+        <blockquote class="manifesto-quote" data-typewrite>
+          "Cada temporada é uma sala de treino diferente, gravada em tempo real, com data e hora. Você não assina um tema, assina o centro inteiro."
+        </blockquote>
+      </div>
+
+      <!-- Controls & Search -->
+      <div class="seasons-controls-bar">
+        <div class="season-tabs" id="season-tabs-container">
+          <button class="tab-btn active" data-season="all">Todas as Temporadas</button>
+          <button class="tab-btn" data-season="0">Temp. 0 (Geral)</button>
+          <button class="tab-btn" data-season="1">Temp. 1 (Produtividade)</button>
+          <button class="tab-btn" data-season="2">Temp. 2 (Aprendizagem)</button>
+          <button class="tab-btn" data-season="3">Temp. 3 (Comunicação)</button>
+          <button class="tab-btn" data-season="L">Aulas Lineares</button>
+          <button class="tab-btn" data-season="D">Estudo de Caso</button>
+        </div>
+
+        <div class="search-and-filter">
+          <div class="search-input-wrapper">
+            <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            <input type="text" id="lesson-search-input" placeholder="Buscar aula por título, tema ou palavra-chave..." autocomplete="off">
+            <button id="clear-search-btn" class="clear-btn hidden">&times;</button>
+          </div>
+
+          <div class="filter-pills" id="status-filter-container">
+            <button class="filter-pill active" data-status="all">Todos os Status</button>
+            <button class="filter-pill" data-status="recorded">Gravadas</button>
+            <button class="filter-pill" data-status="planned">Planejadas</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lesson Counter Stats Bar -->
+      <div class="lessons-counter-info">
+        <span>Exibindo <strong id="visible-count">0</strong> de <strong id="total-count">0</strong> aulas encontradas</span>
+        <div class="badge-group">
+          <span id="season-name-badge" class="active-season-badge">Todas as Temporadas</span>
+          <span id="active-filter-badge" class="active-filter-badge hidden"></span>
+        </div>
+      </div>
+
+      <!-- Grid of Lessons -->
+      <div id="lessons-grid" class="lessons-grid">
+        <!-- Injected via JavaScript -->
+      </div>
+
+      <!-- Load More Button Container -->
+      <div id="load-more-container" class="load-more-wrapper">
+        <!-- Injected via JS when needed -->
+      </div>
+      <div class="purchase-cta">
+        <a class="btn-cta-gold" href="https://pay.kiwify.com.br/OizrzJd">Entrar na Academia</a>
+        <p class="closing-subnote">R$ 30 por mês · Acesso às aulas já disponíveis.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOCO DE PRÁTICA REAL (Galeria com Fotos Reais) -->
+  <section id="pratica-real" class="section-padding gallery-section">
+    <div class="container">
+      <div class="section-header text-center" data-reveal="up">
+        <span class="eyebrow-tag">UMA CARTA ABERTA PRA VOCÊ</span>
+        <h2 class="section-title">Um ano. Quatro coisas <span class="text-gold-serif">ao mesmo tempo</span></h2>
+      </div>
+
+      <div class="letter">
+        <p class="letter-lead">
+          No mesmo ano eu passei em medicina, fui campeão de boxe, aprendi a trabalhar com
+          inteligência artificial e cheguei perto de viabilizar uma empresa.
+        </p>
+
+        <div class="letter-figures" data-mouse-zoom-group>
+          <figure class="letter-figure" data-reveal="up" style="--delay:0ms">
+            <img src="midia/trote-medicina.jpg" alt="Trote após a aprovação em medicina" class="gallery-img">
+            <figcaption>Foto do trote, depois da aprovação em medicina.</figcaption>
+          </figure>
+          <figure class="letter-figure" data-reveal="up" style="--delay:80ms">
+            <img src="org__la-treta-mma-7-torneio-interno-ab0ed357f907.jpeg" alt="Competindo no boxe" class="gallery-img">
+            <figcaption>Foto do momento em que eu estava competindo no boxe.</figcaption>
+          </figure>
+          <figure class="letter-figure" data-reveal="up" style="--delay:160ms">
+            <video src="midia/vendas-comissoes-blur.mp4" autoplay muted loop playsinline class="gallery-img"></video>
+            <figcaption>Notificações de comissão, no celular, sem corte nem edição.</figcaption>
+          </figure>
+          <figure class="letter-figure" data-reveal="up" style="--delay:240ms">
+            <img src="midia/palestra-rotary.jpg" alt="Palestrando no RYLA, evento do Rotary" class="gallery-img">
+            <figcaption>Palestra no RYLA, evento do Rotary.</figcaption>
+          </figure>
+        </div>
+
+        <p>Eu cresci perdido, dando pouca atenção à minha educação. Tive pouco estímulo ao estudo e à leitura. Senti falta de referências que me ajudassem a enxergar o que eu poderia construir.</p>
+        <p>Quando penso na minha aprovação em medicina, acredito que duas habilidades foram decisivas: <strong>disciplina e aprendizagem.</strong> Saber estudar e conseguir continuar estudando fizeram diferença na minha trajetória.</p>
+        <p class="letter-turn">É essa possibilidade de aprender e mudar a própria maneira de agir que eu quero ensinar aqui.</p>
+        <p>Se você sente que tem muito interesse e pouca direção, talvez reconheça uma parte dessa história. Um projeto pode exigir que você aprenda um assunto, organize sua rotina e saiba explicar uma ideia. As habilidades se encontram naquilo que você está tentando fazer.</p>
+        <p>A Academia Polímatas nasceu da vontade de reunir esse aprendizado e oferecer a referência que eu senti falta de ter. Eu estudo, ensino e documento o que vou colocando em prática — com espaço para explicar, questionar e corrigir.</p>
+        <p>Hoje, a temporada em construção é sobre produtividade. Aprendizagem, comunicação, filosofia e outros assuntos fazem parte dessa proposta de formação. <strong>O compromisso é ajudar você a desenvolver repertório e habilidades para os seus próprios projetos.</strong></p>
+      </div>
+      <div class="purchase-cta">
+        <a class="btn-cta-gold" href="https://pay.kiwify.com.br/OizrzJd">Entrar na Academia</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOCO 4: SOBRE O JÚLIO CÉSAR -->
+  <section id="sobre-julio" class="section-padding about-section">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-image-column">
+          <div class="portrait-card" data-mouse-zoom>
+            <div class="portrait-glow"></div>
+            <img src="7ce73230-c9ff-415b-97db-a8694c704b75.jpg" alt="Júlio César — Estudante de Psicologia" class="portrait-img">
+            <div class="portrait-badge">
+              <span class="badge-role">Júlio César</span>
+              <span class="badge-title">Estudante de Psicologia</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-text-column">
+          <span class="eyebrow-tag">QUEM ESTÁ NO COMANDO</span>
+          <h2 class="section-title">Sobre o <span class="text-gold-serif">Júlio César</span></h2>
+          
+          <div class="about-bio-text">
+            <p>
+              Sou estudante de Psicologia, faço estágio clínico supervisionado e me formo aplicando na própria vida tudo aquilo que ensino aqui dentro.
+            </p>
+            <p>
+              A Academia Polímatas nasceu para ser um lugar seguro para aquelas pessoas que veem que têm mais potencial, mas não conseguem atingi-lo. Então decidi juntar todas as habilidades que julgo importantes na vida e documentar elas num processo de desenvolvimento pessoal também. Ora ora, erro a erro.
+            </p>
+          </div>
+
+          <!-- Numbers / Metrics Grid -->
+          <div class="metrics-grid">
+            <div class="metric-card" data-reveal="up" style="--delay:0ms">
+              <span class="metric-number" data-target="50">50</span>
+              <span class="metric-label">Aulas Gravadas (+52h de conteúdo)</span>
+            </div>
+            <div class="metric-card" data-reveal="up" style="--delay:70ms">
+              <span class="metric-number" data-target="72">72</span>
+              <span class="metric-label">Títulos de Aulas Mapeados</span>
+            </div>
+            <div class="metric-card" data-reveal="up" style="--delay:140ms">
+              <span class="metric-number" data-target="2">2</span>
+              <span class="metric-label">Temporadas no Centro de Treino</span>
+            </div>
+            <div class="metric-card" data-reveal="up" style="--delay:210ms">
+              <span class="metric-number">100%</span>
+              <span class="metric-label">Aplicação Prática e Científica</span>
+            </div>
+          </div>
+
+          <div class="about-cta-group">
+            <a class="btn-cta-gold" href="https://pay.kiwify.com.br/OizrzJd">Entrar na Academia</a>
+            <a href="https://www.youtube.com/@JulioCesar-ml3cu" target="_blank" rel="noopener" class="btn-cta-outline" id="about-canal-btn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+              Canal / Conteúdo
+            </a>
+            <a class="btn-cta-gold" id="about-contato-btn" href="https://wa.me/5546988254900">
+              Entrar em Contato
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="primeiros-passos" class="section-padding start-section">
+    <div class="container">
+      <span class="eyebrow-tag" data-reveal="up">SEU PONTO DE PARTIDA</span>
+      <h2 class="section-title" data-reveal="up">Por onde <span class="text-gold-serif">começar?</span></h2>
+      <p class="section-desc" data-reveal="up">Você tem liberdade para explorar. Uma sugestão: escolha algo que quer fazer melhor, encontre uma aula relacionada e coloque uma ideia em prática.</p>
+      <div class="start-grid">
+        <article data-reveal="up" style="--delay:0ms"><span class="step-number">01</span><h3>Escolha uma situação real</h3><p>Um assunto para aprender, uma ideia para apresentar ou um projeto que quer tirar do papel.</p></article>
+        <article data-reveal="up" style="--delay:90ms"><span class="step-number">02</span><h3>Encontre uma aula</h3><p>Comece por “O novo jeito de consumir cursos online” ou explore as aulas gravadas do tema que você precisa agora.</p></article>
+        <article data-reveal="up" style="--delay:180ms"><span class="step-number">03</span><h3>Experimente e continue</h3><p>Aplique uma ideia, observe o que aconteceu e escolha a próxima habilidade que faz sentido desenvolver.</p></article>
+      </div>
+      <a class="btn-cta-outline" href="#temporadas">Explorar as aulas</a>
+    </div>
+  </section>
+
+  <section id="assinatura" class="section-padding offer-section">
+    <div class="container offer-grid">
+      <div>
+        <span class="eyebrow-tag" data-reveal="up">A ACADEMIA INTEIRA, NUMA ASSINATURA</span>
+        <h2 class="section-title" data-reveal="up">Entre para a <span class="text-gold-serif">Academia Polímatas.</span></h2>
+        <p class="section-desc" data-reveal="up">Explore habilidades diferentes no mesmo acervo e acompanhe as novas aulas de Júlio César.</p>
+        <ul class="offer-includes">
+          <li>Acesso às aulas já gravadas das temporadas e às aulas lineares.</li>
+          <li>Novas aulas adicionadas ao acervo durante sua assinatura.</li>
+          <li>Liberdade para escolher a ordem e estudar no seu ritmo.</li>
+        </ul>
+      </div>
+      <div class="offer-card" data-reveal="up" style="--delay:0ms">
+        <p class="eyebrow-tag">ASSINATURA MENSAL</p>
+        <p class="offer-price">R$ 30<span>/mês</span></p>
+        <p>Renovação mensal. Sem permanência mínima.</p>
+        <a class="btn-cta-gold" href="https://pay.kiwify.com.br/OizrzJd">Entrar na Academia</a>
+        <p class="offer-small">Pagamento pela Kiwify. Após a aprovação, as instruções de acesso chegam ao e-mail da compra.</p>
+        <p class="offer-guarantee">7 dias de garantia para solicitar reembolso da compra.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="duvidas" class="section-padding faq-section">
+    <div class="container faq-container">
+      <h2 class="section-title" data-reveal="up">Antes de <span class="text-gold-serif">entrar</span></h2>
+      <details data-reveal="up" style="--delay:0ms"><summary>O que eu recebo ao assinar?</summary><p>Acesso ao acervo já gravado e às novas aulas publicadas enquanto sua assinatura estiver ativa. As aulas marcadas como planejadas ainda não estão disponíveis.</p></details>
+      <details data-reveal="up" style="--delay:90ms"><summary>A Academia é só sobre produtividade?</summary><p>Não. Produtividade é o tema da temporada atual. A proposta é desenvolver várias habilidades; o acervo reúne também aulas de aprendizagem, comunicação, reflexão e outros assuntos. Consulte o catálogo para distinguir o que já está gravado do que está planejado.</p></details>
+      <details data-reveal="up" style="--delay:180ms"><summary>Preciso acompanhar uma ordem ou estar ao vivo?</summary><p>As aulas são gravadas e você escolhe a ordem. Se quiser uma orientação inicial, veja a seção <a href="#primeiros-passos">Por onde começar</a>.</p></details>
+      <details data-reveal="up" style="--delay:270ms"><summary>Como recebo meu acesso?</summary><p>Conclua a assinatura no checkout da Kiwify. Depois da aprovação do pagamento, procure as instruções no e-mail usado na compra, incluindo as pastas de spam e promoções.</p></details>
+      <details data-reveal="up" style="--delay:360ms"><summary>Como funciona a cobrança e o cancelamento?</summary><p>A assinatura custa R$ 30 por mês, com renovação mensal. Para cancelar novas cobranças, use a opção “Gerenciar assinatura” no e-mail da Kiwify. Cancelar a assinatura e pedir reembolso são solicitações diferentes. Veja as <a href="https://ajuda.kiwify.com.br/pt-br/article/como-cancelar-a-assinatura-do-produto-que-comprei-19d0my1/" target="_blank" rel="noopener">instruções de cancelamento</a>.</p></details>
+      <details data-reveal="up" style="--delay:450ms"><summary>A assinatura inclui acompanhamento individual?</summary><p>A assinatura dá acesso às aulas para estudar no seu ritmo. Não inclui mentoria ou acompanhamento individual contínuo.</p></details>
+      <details data-reveal="up" style="--delay:540ms"><summary>Como peço ajuda com o acesso ou a assinatura?</summary><p>Entre em contato pelo <a href="https://wa.me/5546988254900">WhatsApp do Júlio</a> para dúvidas de acesso, cancelamento ou reembolso.</p></details>
+      <details data-reveal="up" style="--delay:630ms"><summary>E se eu não gostar?</summary><p>Você tem 7 dias após a compra para solicitar reembolso. Siga as <a href="https://ajuda.kiwify.com.br/pt-br/article/como-faco-para-pedir-o-reembolso-de-um-produto-que-comprei-1kfom3h/" target="_blank" rel="noopener">instruções oficiais da Kiwify</a>.</p></details>
+    </div>
+  </section>
+
+  <!-- BLOCO 6: FECHAMENTO -->
+  <section id="fechamento" class="section-padding closing-section">
+    <div class="container">
+      <div class="closing-box" data-reveal="up" style="--delay:0ms">
+        <div class="closing-glow"></div>
+        <div class="closing-content">
+          <svg class="quote-mark-svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="url(#goldGradQuote)" stroke-width="1.5">
+            <path d="M3 21c3 0 7-1 7-8V5c0-1.25-.75-2-2-2H4c-1.25 0-2 .75-2 2v6c0 1.25.75 2 2 2h4c0 2.5-1 4-3 5.5L3 21zM15 21c3 0 7-1 7-8V5c0-1.25-.75-2-2-2h-4c-1.25 0-2 .75-2 2v6c0 1.25.75 2 2 2h4c0 2.5-1 4-3 5.5L15 21z"/>
+            <defs>
+              <linearGradient id="goldGradQuote" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#d4a63a"/>
+                <stop offset="100%" stop-color="#f0c85a"/>
+              </linearGradient>
+            </defs>
+          </svg>
+          <blockquote class="closing-quote-text">
+            Você não precisa escolher uma única coisa pra ser bom. Precisa de um lugar onde treinar todas elas ao mesmo tempo, com gente ao lado vendo você construir isso de verdade.
+          </blockquote>
+          
+          <div class="closing-action">
+            <a class="btn-cta-gold btn-lg" id="closing-cta-btn" href="https://pay.kiwify.com.br/OizrzJd">
+              Entrar na Academia Polímatas
+            </a>
+            <p class="closing-subnote">Assine pela Kiwify e receba as instruções de acesso por e-mail.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <span class="footer-title">ACADEMIA POLÍMATAS</span>
+        <p class="footer-copy">© 2026 Júlio César. Todos os direitos reservados.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#hero-pin-wrapper">Início</a>
+        <a href="#topicos-grafo">Nuvem de Tópicos</a>
+        <a href="#temporadas">Temporadas</a>
+        <a href="#sobre-julio">Sobre</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lesson Preview Modal -->
+  <div id="lesson-preview-modal" class="modal-overlay hidden">
+    <div class="modal-card lesson-modal-card">
+      <button id="close-lesson-modal-btn" class="modal-close-btn">&times;</button>
+      <div id="lesson-modal-content">
+        <!-- Injected via JS -->
+      </div>
+    </div>
+  </div>
+
+  <script src="graph.js"></script>
+  <script src="main.js?v=20260912-cards"></script>
+</body>
+</html>

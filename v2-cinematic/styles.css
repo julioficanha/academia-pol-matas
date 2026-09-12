@@ -1,0 +1,558 @@
+/* ==========================================================================
+   Academia Polímatas — V2 cinematográfica
+   Regra de base: este arquivo, sem nenhum script, entrega a página inteira em
+   fluxo normal e legível. Tudo que depende de JS vive atrás de `html.js`.
+   ========================================================================== */
+
+:root {
+  --fundo: #0a0f14;
+  --fundo-alt: #0d1a1f;
+  --cartao: rgba(15, 23, 33, .75);
+  --ouro: #d4a63a;
+  --ouro-claro: #f0c85a;
+  --ouro-borda: rgba(212, 166, 58, .2);
+  --texto: #f5f7fa;
+  --texto-fraco: #8a99ad;
+  --display: 'Bricolage Grotesque', system-ui, sans-serif;
+  --sans: 'Instrument Sans', system-ui, sans-serif;
+  --mono: 'JetBrains Mono', ui-monospace, monospace;
+  --faixa: 1200px;
+  --suave: cubic-bezier(.22, .61, .36, 1);
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--fundo);
+  color: var(--texto);
+  font: 400 clamp(1rem, 1.1vw, 1.09rem)/1.65 var(--sans);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+img, video, canvas, svg { max-width: 100%; height: auto; display: block; }
+
+.pular {
+  position: absolute; left: -9999px; top: 0; z-index: 100;
+  background: var(--ouro); color: #10151b; padding: 12px 18px; font-weight: 600;
+}
+.pular:focus { left: 12px; top: 12px; }
+
+:where(a, button, video, [tabindex]):focus-visible {
+  outline: 3px solid var(--ouro-claro); outline-offset: 3px;
+}
+
+.faixa { width: min(var(--faixa), calc(100% - clamp(32px, 7vw, 96px))); margin-inline: auto; }
+
+/* ---------- topo ---------- */
+.topo {
+  position: sticky; top: 0; z-index: 40;
+  display: flex; align-items: center; gap: clamp(16px, 3vw, 40px);
+  padding: 14px clamp(16px, 4vw, 48px);
+  background: rgba(10, 15, 20, .82);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--ouro-borda);
+}
+.topo__marca { display: flex; align-items: center; gap: 12px; color: var(--ouro); text-decoration: none; }
+.topo__marca svg { width: 30px; }
+.topo__marca span { font: 600 .8rem/1 var(--sans); letter-spacing: .16em; color: var(--texto); }
+.topo__nav { display: flex; gap: clamp(12px, 2vw, 26px); margin-left: auto; }
+.topo__nav a { color: var(--texto-fraco); text-decoration: none; font-size: .92rem; transition: color 220ms; }
+.topo__nav a:hover { color: var(--ouro-claro); }
+
+/* ---------- botões ---------- */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  padding: 13px 24px; border-radius: 10px; text-decoration: none;
+  font: 600 .95rem/1 var(--sans); white-space: nowrap;
+  transition: transform 260ms var(--suave), box-shadow 260ms var(--suave), background 260ms;
+}
+.btn--ouro { background: var(--ouro); color: #10151b; }
+.btn--ouro:hover { background: var(--ouro-claro); transform: translateY(-2px); box-shadow: 0 12px 30px rgba(212, 166, 58, .26); }
+.btn--linha { border: 1px solid var(--ouro-borda); color: var(--texto); }
+.btn--linha:hover { border-color: var(--ouro); transform: translateY(-2px); }
+.btn--grande { padding: 18px 40px; font-size: 1.06rem; }
+
+/* ---------- tipografia ---------- */
+.olho {
+  font: 500 .74rem/1.4 var(--mono);
+  letter-spacing: .2em; text-transform: uppercase; color: var(--ouro);
+  margin: 0 0 18px;
+}
+.olho--grande { font-size: clamp(.78rem, 1.05vw, .95rem); letter-spacing: .24em; margin-bottom: 22px; }
+.titulo-gigante {
+  font: 800 clamp(2.4rem, 6.4vw, 5.2rem)/1.02 var(--display);
+  letter-spacing: -.02em; margin: 0 0 24px; text-wrap: balance;
+}
+.titulo-grande {
+  font: 700 clamp(1.8rem, 3.6vw, 3rem)/1.1 var(--display);
+  letter-spacing: -.01em; margin: 0 0 20px; text-wrap: balance;
+}
+.titulo-gigante em, .titulo-grande em { font-style: normal; color: var(--ouro); }
+.conduz { max-width: 56ch; color: var(--texto-fraco); font-size: clamp(1.02rem, 1.3vw, 1.2rem); }
+.conduz strong { color: var(--texto); font-weight: 600; }
+.conduz--dica { font-family: var(--mono); font-size: .78rem; letter-spacing: .1em; color: var(--ouro); margin-top: 26px; }
+.preco { font-family: var(--mono); font-size: .95rem; color: var(--texto-fraco); margin: 26px 0 0; }
+.preco strong { color: var(--texto); }
+.acoes { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 30px; }
+
+/* Título com profundidade real: extrusão escura + halo de ouro na base. */
+.titulo-3d {
+  text-shadow:
+    0 1px 0 #131d27, 0 2px 0 #111a23, 0 3px 0 #0f1720,
+    0 4px 0 #0d141c, 0 5px 0 #0b1119, 0 6px 1px rgba(0, 0, 0, .5),
+    0 10px 22px rgba(212, 166, 58, .16);
+  rotate: x 9deg;
+  transform-origin: 50% 100%;
+}
+#amostra, .carta-aberta { perspective: 900px; }
+
+.cena { padding: clamp(80px, 12vh, 150px) 0; position: relative; }
+
+/* ---------- centro estático ----------
+   O JS escreve `--sobe` e `--op` conforme a seção cruza o centro da tela: o
+   conteúdo sobe para o meio, segura, e sai devagar. Sem JS, tudo fica parado. */
+[data-centro], [data-montar] {
+  transform: translate3d(0, var(--sobe, 0px), 0);
+  opacity: var(--op, 1);
+}
+
+/* ---------- 1. abertura ---------- */
+.cena--abertura { min-height: 92vh; display: grid; align-items: center; overflow: hidden; }
+.profundidade { position: absolute; inset: 0; perspective: 1200px; pointer-events: none; }
+.profundidade > * { position: absolute; inset: -20%; transform: translateZ(var(--z, 0px)); }
+.profundidade__grade {
+  background-image:
+    linear-gradient(rgba(212, 166, 58, .05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(212, 166, 58, .05) 1px, transparent 1px);
+  background-size: 78px 78px;
+  mask-image: radial-gradient(ellipse at 50% 45%, #000 15%, transparent 68%);
+}
+.profundidade__halo { background: radial-gradient(ellipse at 62% 42%, rgba(212, 166, 58, .1), transparent 58%); }
+
+.abertura__grade {
+  display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr);
+  align-items: center; gap: clamp(32px, 5vw, 80px); position: relative; z-index: 2;
+}
+
+.emblema3d { perspective: 900px; }
+.emblema3d__palco {
+  position: relative; aspect-ratio: 1; transform-style: preserve-3d;
+  transform: rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg));
+  transition: transform 520ms var(--suave);
+}
+.emblema3d__plano {
+  position: absolute; inset: 0; transform: translateZ(var(--z));
+  transform-style: preserve-3d;
+}
+
+/* ---------- letras em 3D (digitação, respiro e dobra) ----------
+   As classes abaixo só existem depois que o JS fatia o texto. Enquanto isso o
+   texto é texto: nada aqui esconde conteúdo por padrão. */
+.txt3d { perspective: 800px; }
+.txt3d .pal { display: inline-block; white-space: nowrap; transform-style: preserve-3d; }
+.txt3d .let { display: inline-block; transform-style: preserve-3d; }
+
+/* digitação */
+.esperando .let { opacity: 0; }
+.digitou .let { animation: chegar 380ms var(--suave) var(--atraso, 0ms) both; }
+@keyframes chegar {
+  from { opacity: 0; transform: translate3d(0, .38em, -150px) rotateX(48deg); }
+  to   { opacity: 1; transform: none; }
+}
+.digitando::after {
+  content: '▌'; color: var(--ouro); margin-left: .04em;
+  animation: pisca 760ms steps(1) infinite;
+}
+@keyframes pisca { 0%, 49% { opacity: 1; } 50%, 100% { opacity: 0; } }
+
+/* flutuação depois que a frase termina de ser digitada */
+.flutua .pal { animation: pairar-pal 7.5s ease-in-out infinite alternate; animation-delay: calc(var(--i, 0) * -.72s); }
+@keyframes pairar-pal {
+  from { translate: 0 0; }
+  to   { translate: 0 -4px; }
+}
+
+/* respiro: as letras se separam de leve e voltam a se reunir.
+   Sem fade de entrada: um `both` partindo de opacity 0 esconderia o rótulo
+   em qualquer ambiente onde as animações não avancem. */
+.respira .let { animation: respirar 6.4s ease-in-out infinite; animation-delay: calc(var(--i, 0) * 80ms); }
+@keyframes respirar {
+  0%, 100% { transform: none; }
+  45% { transform: translate3d(calc(var(--dir, 0) * 3.4px), -2px, 14px); }
+}
+
+/* flutuação natural, igual à da abertura: cada palavra no seu próprio tempo */
+.flutua-livre .pal { animation: pairar-pal 8.5s ease-in-out infinite alternate; animation-delay: calc(var(--i, 0) * -.85s); }
+
+/* ---------- 2. as três situações ---------- */
+.situacoes { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr); gap: clamp(28px, 5vw, 70px); align-items: center; }
+.situacoes__lista { list-style: none; margin: 0; padding: 0; display: grid; gap: clamp(22px, 3.5vw, 40px); }
+.situacoes__lista li { border-left: 2px solid var(--ouro); padding-left: 24px; }
+.situacoes__lista h2 { font: 700 clamp(1.4rem, 3vw, 2.4rem)/1.12 var(--display); margin: 0 0 8px; }
+.situacoes__lista p { margin: 0; color: var(--ouro-claro); }
+.glifo { width: 30px; height: 30px; color: var(--ouro); margin-bottom: 14px; }
+
+.foto-zoom {
+  margin: 0; border: 1px solid var(--ouro-borda); border-radius: 16px; overflow: hidden;
+  background: var(--cartao); box-shadow: 0 24px 60px rgba(0, 0, 0, .6);
+}
+/* A fonte é 873x857, quase quadrada: aparece na proporção nativa, sem recorte. */
+.foto-zoom img {
+  width: 100%; height: auto; aspect-ratio: 873 / 857; object-fit: cover;
+  transform-origin: var(--zx, 50%) var(--zy, 50%);
+  transition: transform 460ms var(--suave);
+}
+.foto-zoom:hover img { transform: scale(1.09); }
+.foto-zoom figcaption {
+  padding: 12px 16px; font: 500 .78rem/1.4 var(--sans);
+  color: var(--texto-fraco); border-top: 1px solid var(--ouro-borda);
+}
+
+/* ---------- 3. a rede ----------
+   Base (sem JS): texto e painel em fluxo, canvas fora de cena. */
+.constelacao__palco canvas { display: none; }
+.constelacao__painel { padding-top: clamp(40px, 6vh, 70px); }
+.constelacao__painel h3 {
+  font: 600 clamp(.8rem, 1vw, .95rem)/1.3 var(--mono);
+  letter-spacing: .18em; text-transform: uppercase;
+  color: var(--ouro); margin: 0 0 24px;
+}
+
+/* Grade simétrica: 32 assuntos em 4 colunas exatas. */
+.lista-topicos {
+  list-style: none; margin: 0; padding: 0;
+  display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px;
+}
+.lista-topicos li {
+  display: flex; align-items: center; justify-content: center; text-align: center;
+  font: 500 clamp(.78rem, .92vw, .92rem)/1.24 var(--sans);
+  letter-spacing: .05em; text-transform: uppercase;
+  padding: 13px 14px; min-height: 60px;
+  border: 1px solid var(--ouro-borda); border-radius: 11px; color: var(--texto-fraco);
+  background: rgba(13, 26, 31, .5);
+  /* Nada na página fica parado: cada assunto respira no seu próprio tempo. */
+  animation: chip-respira 4.6s ease-in-out infinite alternate;
+  animation-delay: calc(var(--n, 0) * 85ms);
+}
+.lista-topicos li[data-destaque] {
+  border-color: rgba(212, 166, 58, .55); color: var(--ouro-claro); font-weight: 600;
+  background: rgba(212, 166, 58, .08); box-shadow: 0 0 0 1px rgba(212, 166, 58, .12) inset;
+  animation-name: chip-respira-ouro;
+}
+@keyframes chip-respira {
+  from { translate: 0 0; opacity: .74; }
+  to   { translate: 0 -4px; opacity: 1; }
+}
+@keyframes chip-respira-ouro {
+  from { translate: 0 0; opacity: .8; box-shadow: 0 0 0 1px rgba(212, 166, 58, .12) inset; }
+  to   { translate: 0 -5px; opacity: 1; box-shadow: 0 0 0 1px rgba(212, 166, 58, .3) inset, 0 8px 22px rgba(212, 166, 58, .14); }
+}
+@media (max-height: 800px) {
+  .lista-topicos li { min-height: 50px; padding: 10px 11px; font-size: .78rem; }
+  .lista-topicos { gap: 9px; }
+  .constelacao__painel h3 { margin-bottom: 16px; }
+}
+.aviso { color: var(--texto-fraco); font-size: .9rem; }
+.aviso a, .rodape-nota a { color: var(--ouro); }
+
+/* Camada cinematográfica da rede: só com JS e só onde há largura para ela. */
+@media (min-width: 901px) {
+  html.js .cena--constelacao { padding: 0; }
+  html.js .constelacao__palco { position: relative; height: 430vh; }
+  html.js .constelacao__fixo { position: sticky; top: 0; height: 100vh; overflow: hidden; }
+  html.js .constelacao__palco canvas {
+    display: block; position: absolute; inset: 0; width: 100%; height: 100%;
+    opacity: var(--ceu, 1);
+    background: radial-gradient(ellipse at 50% 50%, #0c1319, var(--fundo) 70%);
+  }
+  html.js .constelacao__texto {
+    position: absolute; top: 13vh; left: 50%; transform: translateX(-50%);
+    z-index: 2; pointer-events: none; opacity: var(--texto, 1);
+  }
+  html.js .constelacao__texto .conduz { pointer-events: auto; }
+  html.js .constelacao__painel {
+    position: absolute; left: 50%; top: 50%; z-index: 3; padding: 0;
+    /* Entrada: vem do fundo no eixo Z. Saída: sobe e apaga. */
+    transform:
+      translate(-50%, calc(-50% - var(--sair, 0) * 90px))
+      perspective(1100px)
+      translateZ(calc((1 - var(--surgir, 0)) * -620px));
+    opacity: calc(var(--surgir, 0) * (1 - var(--sair, 0)));
+    filter: blur(calc((1 - var(--surgir, 0)) * 7px));
+    pointer-events: none;
+  }
+  html.js .constelacao__painel.painel-vivo { pointer-events: auto; }
+  html.js .constelacao__painel h3 { text-align: center; }
+}
+
+/* ---------- 4. filme ---------- */
+.filme {
+  margin: 34px 0 0; overflow: hidden; border: 1px solid var(--ouro-borda);
+  border-radius: 18px; background: #080d12; box-shadow: 0 30px 80px rgba(0, 0, 0, .5);
+}
+.filme__palco { position: relative; }
+.filme video { width: 100%; aspect-ratio: 16/9; background: #080d12; object-fit: contain; display: block; }
+
+/* Convite por cima do vídeo: a prévia roda no mudo e o clique recomeça do
+   início, com som. Continua sendo um <button> de verdade, alcançável pelo
+   teclado e com nome legível. */
+.filme__play {
+  position: absolute; inset: 0; display: flex; flex-direction: column;
+  align-items: center; justify-content: center; gap: 16px;
+  border: 0; cursor: pointer; color: var(--ouro-claro);
+  background: radial-gradient(ellipse at 50% 50%, rgba(5, 9, 13, .62), rgba(5, 9, 13, .86));
+  font: 600 clamp(.88rem, 1.1vw, 1rem)/1.3 var(--sans);
+  transition: background 320ms, opacity 320ms;
+}
+.filme__play:hover { background: radial-gradient(ellipse at 50% 50%, rgba(5, 9, 13, .48), rgba(5, 9, 13, .78)); }
+.filme__marca svg { width: clamp(58px, 6vw, 82px); filter: drop-shadow(0 8px 24px rgba(0, 0, 0, .6)); }
+.filme__marca { transition: transform 340ms var(--suave); }
+.filme__play:hover .filme__marca { transform: scale(1.07); }
+.filme__convite {
+  padding: 9px 18px; border-radius: 999px;
+  background: rgba(10, 15, 20, .72); border: 1px solid var(--ouro-borda);
+}
+.filme__play.oculto { display: none; }
+.filme figcaption {
+  display: flex; justify-content: space-between; gap: 14px; padding: 16px 22px;
+  font: 400 .78rem/1.4 var(--mono); color: var(--texto-fraco);
+  border-top: 1px solid var(--ouro-borda);
+}
+
+/* ---------- 5. números ---------- */
+.numeros { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 22px; margin-top: 34px; }
+.numeros > div { border: 1px solid var(--ouro-borda); border-radius: 14px; padding: 26px; background: var(--cartao); }
+.numero { display: block; font: 800 clamp(2.6rem, 5vw, 3.8rem)/1 var(--display); color: var(--ouro); }
+.numero i { font-style: normal; font-size: .42em; color: var(--texto-fraco); }
+.numeros h3 { font: 600 1rem/1.3 var(--sans); margin: 10px 0 8px; }
+.numeros p { margin: 0; color: var(--texto-fraco); font-size: .92rem; }
+
+/* ---------- 6. Júlio: texto à esquerda, uma foto quadrada à direita ---- */
+.julio { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); gap: clamp(28px, 5vw, 64px); align-items: center; }
+.julio__texto p:not(.olho) { color: var(--texto-fraco); max-width: 54ch; }
+.foto-zoom--quadrada img { aspect-ratio: 1 / 1; object-position: 50% 20%; }
+
+/* ---------- 7. ação: as três provas compondo a moldura da oferta -------
+   As cartas ficam atrás do título, rebaixadas, para que o texto continue
+   sendo a primeira coisa que se lê. O contraste sobe só na que recebe o
+   ponteiro. */
+.cena--final { padding-bottom: clamp(90px, 14vh, 170px); }
+.final { position: relative; text-align: center; padding: clamp(20px, 5vh, 60px) 0 10px; }
+.final__texto { position: relative; z-index: 2; width: min(58ch, 100%); margin-inline: auto; }
+.final__texto .conduz { margin-inline: auto; }
+.final .titulo-gigante { text-shadow: 0 6px 34px rgba(5, 9, 13, .92), 0 2px 10px rgba(5, 9, 13, .8); }
+
+.final__cartas { position: absolute; inset: 0; z-index: 1; pointer-events: none; perspective: 1200px; }
+.carta {
+  position: absolute; margin: 0; pointer-events: auto; overflow: hidden;
+  border: 1px solid var(--ouro-borda); border-radius: 14px; background: var(--cartao);
+  box-shadow: 0 18px 46px rgba(0, 0, 0, .6);
+  opacity: .4; filter: saturate(.72);
+  transform-origin: 50% 60%;
+  animation: pairar var(--dur, 9s) ease-in-out var(--fase, 0s) infinite alternate;
+  transition: transform 420ms var(--suave), rotate 420ms var(--suave), opacity 380ms,
+              filter 380ms, box-shadow 420ms var(--suave), border-color 300ms;
+}
+.carta img, .carta video {
+  width: 100%; height: auto; aspect-ratio: 3 / 4; object-fit: cover;
+  transform-origin: var(--zx, 50%) var(--zy, 50%);
+  transition: transform 520ms var(--suave);
+}
+.carta figcaption {
+  position: absolute; inset: auto 0 0 0; padding: 28px 12px 10px;
+  font: 500 .72rem/1.3 var(--sans); color: #eef2f8; text-align: left;
+  background: linear-gradient(to top, rgba(5, 9, 13, .94), rgba(5, 9, 13, .45) 60%, transparent);
+  opacity: 0; transition: opacity 320ms;
+}
+.carta:hover, .carta:focus-visible {
+  opacity: 1; filter: none; rotate: 0deg; z-index: 6;
+  transform: translateZ(120px);
+  box-shadow: 0 40px 96px rgba(0, 0, 0, .8); border-color: var(--ouro);
+}
+.carta:hover img, .carta:hover video,
+.carta:focus-visible img, .carta:focus-visible video { transform: scale(1.1); }
+.carta:hover figcaption, .carta:focus-visible figcaption { opacity: 1; }
+@keyframes pairar { from { translate: 0 0; } to { translate: 0 -11px; } }
+
+.carta--boxe   { left: 1%;  top: 6%;  width: 21%; rotate: -8deg;  z-index: 3; --dur: 9.5s; --fase: 0s; }
+.carta--vendas { left: 13%; top: 52%; width: 15%; rotate: 5deg;   z-index: 2; --dur: 11s;  --fase: -4.2s; }
+.carta--palco  { right: 1%; top: 10%; width: 25%; rotate: 7deg;   z-index: 3; --dur: 8s;   --fase: -2.4s; }
+.carta--medicina { right: 7%; top: 56%; width: 16%; rotate: -6deg; z-index: 2; --dur: 10.5s; --fase: -6s; }
+.carta--palco img { aspect-ratio: 4 / 3; }
+.carta--boxe img { object-position: 50% 24%; }
+.carta--medicina img { aspect-ratio: 1 / 1; object-position: 50% 22%; }
+
+.preco--grande { font-family: var(--display); margin: 30px 0; }
+.preco--grande strong { font-size: clamp(3rem, 7vw, 5rem); font-weight: 800; color: var(--ouro); }
+.preco--grande span { color: var(--texto-fraco); font-family: var(--sans); }
+.rodape-nota { margin-top: 46px; font-size: .82rem; color: var(--texto-fraco); text-align: center; }
+
+/* ---------- 8. a carta: as palavras vêm na direção de quem lê ----------
+   Cada pedaço parte de 460px atrás do plano da tela e avança até ele. Com a
+   perspectiva da coluna, isso é aproximação real, não um fade disfarçado. */
+.cena--carta { padding-top: clamp(50px, 8vh, 90px); }
+.carta-aberta { width: min(72ch, calc(100% - clamp(32px, 7vw, 96px))); }
+.carta-aberta p { color: var(--texto-fraco); }
+.carta__abre {
+  font: 500 clamp(1.15rem, 1.7vw, 1.5rem)/1.5 var(--display);
+  color: var(--texto) !important; margin: 34px 0 30px;
+}
+.carta__virada {
+  font: 600 clamp(1.05rem, 1.4vw, 1.3rem)/1.55 var(--sans);
+  color: var(--ouro-claro) !important;
+  border-left: 2px solid var(--ouro); padding-left: 22px; margin: 34px 0;
+}
+.carta__assina {
+  font: 700 1.15rem/1 var(--display); color: var(--texto) !important;
+  margin-top: 40px; letter-spacing: .01em;
+}
+.carta__acao { margin: 34px 0 10px; }
+
+ /* A perspectiva fica em cada palavra, não na coluna: assim o pedaço cresce
+    na direção de quem lê sem escorregar para os lados. */
+.vindo .pal { perspective: 380px; }
+.vindo-ativo .let { animation: vir 620ms var(--suave) var(--atraso, 0ms) both; }
+@keyframes vir {
+  from { opacity: 0; transform: translate3d(0, 12px, -230px); filter: blur(4px); }
+  62%  { opacity: 1; filter: blur(0); }
+  to   { opacity: 1; transform: none; filter: blur(0); }
+}
+
+/* ---------- revelação ao rolar ----------
+   Sem opacity: 0 de partida. O estado inicial vem da própria animação, então
+   nenhuma falha de JS deixa a página em branco. */
+[data-revelar].revelando { animation: subir 700ms var(--suave) var(--atraso, 0ms) both; }
+@keyframes subir { from { opacity: 0; transform: translateY(26px); } to { opacity: 1; transform: none; } }
+
+/* Rede de segurança: aplicada por JS quando o relógio de animação não avança
+   (aba de fundo, painel embutido, motor de renderização congelado). */
+.pronto .let, .pronto.let { opacity: 1 !important; transform: none !important; animation: none !important; }
+.pronto::after { display: none !important; }
+[data-revelar].pronto, .pronto[data-revelar] { animation: none !important; opacity: 1 !important; transform: none !important; }
+
+/* ---------- responsivo ---------- */
+@media (max-width: 900px) {
+  .abertura__grade, .situacoes, .julio { grid-template-columns: 1fr; }
+  .emblema3d { max-width: 320px; margin-inline: auto; order: -1; }
+  .topo__nav { display: none; }
+  /* Sem largura para o leque: as três provas viram uma faixa em fluxo. */
+  .final__cartas {
+    position: static; inset: auto; pointer-events: auto; display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-top: 36px;
+  }
+  .carta {
+    position: static; width: auto; rotate: 0deg !important; opacity: 1; filter: none;
+  }
+  .carta figcaption { opacity: 1; }
+  .carta:hover, .carta:focus-visible { transform: scale(1.03); }
+  .lista-topicos { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .titulo-3d { rotate: none; }
+}
+@media (max-width: 520px) {
+  .lista-topicos li { font-size: .74rem; padding: 9px 8px; min-height: 42px; }
+}
+
+/* ---------- movimento reduzido ----------
+   Sem voo, sem digitação, sem loop, sem inclinação. Tudo legível em fluxo. */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  [data-revelar].revelando { animation: none; }
+  [data-centro], [data-montar] { transform: none !important; opacity: 1 !important; }
+  .emblema3d__palco { transform: none !important; transition: none; }
+  .carta { animation: none; transition: none; opacity: 1; filter: none; }
+  .carta:hover, .carta:focus-visible { transform: none; }
+  .carta:hover img, .carta:focus-visible img { transform: none; }
+  .carta figcaption { opacity: 1; }
+  .titulo-3d { rotate: none; }
+  .respira, .respira .let, .flutua .pal, .flutua-livre .pal, .digitou .let { animation: none !important; }
+  .vindo-ativo .let { animation: none !important; }
+  .lista-topicos li { animation: none !important; opacity: 1; }
+  .foto-zoom:hover img { transform: none; }
+  .esperando .let { opacity: 1; }
+  .digitando::after { display: none; }
+  html.js .constelacao__palco { height: auto; }
+  html.js .constelacao__fixo { position: static; height: auto; padding-bottom: 40px; }
+  html.js .constelacao__palco canvas { position: static; height: 46vh; opacity: 1 !important; }
+  html.js .constelacao__texto { position: static; transform: none; padding-top: 36px; opacity: 1 !important; }
+  html.js .constelacao__painel {
+    position: static; transform: none !important; opacity: 1 !important;
+    filter: none !important; pointer-events: auto; padding-top: 40px;
+  }
+  .btn { transition: none; }
+  .filme__marca, .filme__play { transition: none; }
+  .filme__play:hover .filme__marca { transform: none; }
+}
+
+/* ==========================================================================
+   Blocos que vieram da v1 quando esta página foi para o ar: por onde começar,
+   as perguntas diretas e o rodapé com contato. Sem JS eles funcionam: o
+   <details> é nativo e os links são links.
+   ========================================================================== */
+
+/* ---------- 9. por onde começar ---------- */
+.passos {
+  list-style: none; margin: 34px 0 0; padding: 0;
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;
+  counter-reset: passo;
+}
+.passos li {
+  border: 1px solid var(--ouro-borda); border-radius: 14px; padding: 26px;
+  background: var(--cartao);
+}
+.passos__n { display: block; font: 500 .78rem/1 var(--mono); letter-spacing: .18em; color: var(--ouro); margin-bottom: 14px; }
+.passos h3 { font: 700 1.08rem/1.3 var(--display); margin: 0 0 8px; }
+.passos p { margin: 0; color: var(--texto-fraco); font-size: .93rem; }
+
+/* ---------- 10. antes de entrar ---------- */
+.duvidas { margin-top: 30px; border-top: 1px solid var(--ouro-borda); }
+.duvidas details { border-bottom: 1px solid var(--ouro-borda); }
+.duvidas summary {
+  display: flex; align-items: center; gap: 14px; cursor: pointer;
+  padding: 20px 0; font: 600 clamp(1rem, 1.2vw, 1.12rem)/1.4 var(--sans);
+  list-style: none;
+}
+.duvidas summary::-webkit-details-marker { display: none; }
+.duvidas summary::after {
+  content: '+'; margin-left: auto; flex: none;
+  font: 400 1.5rem/1 var(--mono); color: var(--ouro);
+  transition: transform 300ms var(--suave);
+}
+.duvidas details[open] summary::after { transform: rotate(45deg); }
+.duvidas summary:hover { color: var(--ouro-claro); }
+.duvidas details p {
+  margin: 0 0 22px; padding-right: clamp(0px, 4vw, 56px);
+  color: var(--texto-fraco); max-width: 72ch;
+}
+.duvidas a { color: var(--ouro); }
+
+/* ---------- rodapé com contato ---------- */
+.rodape { border-top: 1px solid var(--ouro-borda); background: rgba(13, 26, 31, .4); padding: clamp(60px, 9vh, 110px) 0 34px; }
+.rodape__grade {
+  display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr);
+  gap: clamp(30px, 5vw, 70px); align-items: start;
+}
+.rodape .titulo-grande { margin-bottom: 14px; }
+.rodape__oferta {
+  border: 1px solid var(--ouro-borda); border-radius: 16px; padding: clamp(24px, 3vw, 34px);
+  background: var(--cartao); text-align: center;
+}
+.rodape__oferta .preco--grande { margin: 0 0 22px; }
+.rodape__nota { margin: 22px 0 0; font-size: .8rem; line-height: 1.55; color: var(--texto-fraco); }
+.rodape__fim {
+  margin: clamp(44px, 6vh, 70px) auto 0; padding-top: 26px;
+  border-top: 1px solid var(--ouro-borda);
+  display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;
+  font-size: .8rem; color: var(--texto-fraco);
+}
+.rodape__fim a { color: var(--texto-fraco); }
+.rodape__fim a:hover { color: var(--ouro-claro); }
+.rodape .btn--linha svg { margin-right: 8px; }
+
+@media (max-width: 900px) {
+  .rodape__grade { grid-template-columns: 1fr; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .duvidas details[open] summary::after { transform: none; }
+  .duvidas summary::after { transition: none; }
+}

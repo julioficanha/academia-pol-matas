@@ -1,0 +1,314 @@
+{
+ "topicos": [
+  {
+   "nome": "Produtividade",
+   "categoria": "produtividade",
+   "peso": 1.4
+  },
+  {
+   "nome": "Disciplina",
+   "categoria": "produtividade",
+   "peso": 1.3
+  },
+  {
+   "nome": "Motivação",
+   "categoria": "produtividade",
+   "peso": 1.2
+  },
+  {
+   "nome": "Autoestima",
+   "categoria": "geral",
+   "peso": 1.0
+  },
+  {
+   "nome": "Ansiedade",
+   "categoria": "geral",
+   "peso": 1.3
+  },
+  {
+   "nome": "Identidade",
+   "categoria": "geral",
+   "peso": 1.2
+  },
+  {
+   "nome": "Taxonomia do conhecimento",
+   "categoria": "aprendizagem",
+   "peso": 1.4
+  },
+  {
+   "nome": "Masculinidade",
+   "categoria": "geral",
+   "peso": 1.1
+  },
+  {
+   "nome": "Controle da mente",
+   "categoria": "geral",
+   "peso": 1.2
+  },
+  {
+   "nome": "Sucesso",
+   "categoria": "produtividade",
+   "peso": 1.1
+  },
+  {
+   "nome": "Esporte",
+   "categoria": "geral",
+   "peso": 1.0
+  },
+  {
+   "nome": "Metas",
+   "categoria": "produtividade",
+   "peso": 1.2
+  },
+  {
+   "nome": "Desistência",
+   "categoria": "geral",
+   "peso": 1.1
+  },
+  {
+   "nome": "Estudos",
+   "categoria": "aprendizagem",
+   "peso": 1.3
+  },
+  {
+   "nome": "Comunicação",
+   "categoria": "comunicacao",
+   "peso": 1.4
+  },
+  {
+   "nome": "Medo de errar",
+   "categoria": "comunicacao",
+   "peso": 1.2
+  },
+  {
+   "nome": "Rotina",
+   "categoria": "produtividade",
+   "peso": 1.1
+  },
+  {
+   "nome": "Resolução de problemas",
+   "categoria": "aprendizagem",
+   "peso": 1.2
+  },
+  {
+   "nome": "Memória",
+   "categoria": "aprendizagem",
+   "peso": 1.3
+  },
+  {
+   "nome": "Momentos difíceis",
+   "categoria": "geral",
+   "peso": 1.1
+  },
+  {
+   "nome": "Inteligência Artificial",
+   "categoria": "aprendizagem",
+   "peso": 1.3
+  },
+  {
+   "nome": "Tomada de decisão",
+   "categoria": "aprendizagem",
+   "peso": 1.2
+  },
+  {
+   "nome": "Leveza",
+   "categoria": "geral",
+   "peso": 1.0
+  },
+  {
+   "nome": "Crise existencial",
+   "categoria": "geral",
+   "peso": 1.4
+  },
+  {
+   "nome": "Generalismo",
+   "categoria": "aprendizagem",
+   "peso": 1.5
+  },
+  {
+   "nome": "Brain fog",
+   "categoria": "produtividade",
+   "peso": 1.0
+  },
+  {
+   "nome": "Psicologia das relações",
+   "categoria": "comunicacao",
+   "peso": 1.3
+  },
+  {
+   "nome": "Fracasso",
+   "categoria": "geral",
+   "peso": 1.1
+  },
+  {
+   "nome": "Curiosidade",
+   "categoria": "aprendizagem",
+   "peso": 1.3
+  },
+  {
+   "nome": "Potência intelectual",
+   "categoria": "aprendizagem",
+   "peso": 1.2
+  },
+  {
+   "nome": "Talento",
+   "categoria": "aprendizagem",
+   "peso": 1.0
+  },
+  {
+   "nome": "Dinheiro",
+   "categoria": "geral",
+   "peso": 1.0
+  }
+ ],
+ "conexoes": [
+  [
+   "Crise existencial",
+   "Identidade"
+  ],
+  [
+   "Crise existencial",
+   "Ansiedade"
+  ],
+  [
+   "Crise existencial",
+   "Generalismo"
+  ],
+  [
+   "Crise existencial",
+   "Brain fog"
+  ],
+  [
+   "Crise existencial",
+   "Desistência"
+  ],
+  [
+   "Crise existencial",
+   "Momentos difíceis"
+  ],
+  [
+   "Crise existencial",
+   "Motivação"
+  ],
+  [
+   "Produtividade",
+   "Disciplina"
+  ],
+  [
+   "Produtividade",
+   "Motivação"
+  ],
+  [
+   "Produtividade",
+   "Rotina"
+  ],
+  [
+   "Produtividade",
+   "Metas"
+  ],
+  [
+   "Produtividade",
+   "Brain fog"
+  ],
+  [
+   "Produtividade",
+   "Resolução de problemas"
+  ],
+  [
+   "Taxonomia do conhecimento",
+   "Estudos"
+  ],
+  [
+   "Taxonomia do conhecimento",
+   "Generalismo"
+  ],
+  [
+   "Taxonomia do conhecimento",
+   "Memória"
+  ],
+  [
+   "Taxonomia do conhecimento",
+   "Potência intelectual"
+  ],
+  [
+   "Taxonomia do conhecimento",
+   "Curiosidade"
+  ],
+  [
+   "Taxonomia do conhecimento",
+   "Inteligência Artificial"
+  ],
+  [
+   "Comunicação",
+   "Medo de errar"
+  ],
+  [
+   "Comunicação",
+   "Psicologia das relações"
+  ],
+  [
+   "Comunicação",
+   "Autoestima"
+  ],
+  [
+   "Comunicação",
+   "Tomada de decisão"
+  ],
+  [
+   "Disciplina",
+   "Esporte"
+  ],
+  [
+   "Disciplina",
+   "Desistência"
+  ],
+  [
+   "Disciplina",
+   "Controle da mente"
+  ],
+  [
+   "Disciplina",
+   "Fracasso"
+  ],
+  [
+   "Generalismo",
+   "Talento"
+  ],
+  [
+   "Generalismo",
+   "Curiosidade"
+  ],
+  [
+   "Generalismo",
+   "Potência intelectual"
+  ],
+  [
+   "Generalismo",
+   "Dinheiro"
+  ],
+  [
+   "Generalismo",
+   "Tomada de decisão"
+  ],
+  [
+   "Ansiedade",
+   "Controle da mente"
+  ],
+  [
+   "Ansiedade",
+   "Leveza"
+  ],
+  [
+   "Masculinidade",
+   "Identidade"
+  ],
+  [
+   "Sucesso",
+   "Dinheiro"
+  ],
+  [
+   "Sucesso",
+   "Metas"
+  ]
+ ]
+}
