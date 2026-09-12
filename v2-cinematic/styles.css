@@ -556,3 +556,101 @@ img, video, canvas, svg { max-width: 100%; height: auto; display: block; }
   .duvidas details[open] summary::after { transform: none; }
   .duvidas summary::after { transition: none; }
 }
+
+/* ==========================================================================
+   O catálogo das Temporadas
+   As 138 aulas são HTML de verdade: sem JavaScript a lista inteira continua
+   visível e legível. As abas, a busca e o filtro entram por cima.
+   ========================================================================== */
+.so-leitor {
+  position: absolute; width: 1px; height: 1px; overflow: hidden;
+  clip-path: inset(50%); white-space: nowrap;
+}
+
+.citacao {
+  margin: 0 0 38px; padding-left: 22px; border-left: 2px solid var(--ouro);
+  font: 500 clamp(1.02rem, 1.45vw, 1.28rem)/1.55 var(--display);
+  color: var(--texto); max-width: 62ch;
+}
+
+.catalogo__abas { display: flex; flex-wrap: wrap; gap: 8px; }
+.aba, .pilula {
+  display: inline-flex; align-items: center; gap: 7px; cursor: pointer;
+  padding: 10px 15px; border-radius: 999px;
+  border: 1px solid var(--ouro-borda); background: rgba(13, 26, 31, .55);
+  color: var(--texto-fraco); font: 500 .84rem/1 var(--sans);
+  transition: border-color 240ms, color 240ms, background 240ms;
+}
+.aba i, .pilula i {
+  font-style: normal; font-family: var(--mono); font-size: .74em;
+  padding: 2px 6px; border-radius: 6px;
+  background: rgba(212, 166, 58, .12); color: var(--ouro);
+}
+.aba:hover, .pilula:hover { border-color: var(--ouro); color: var(--texto); }
+.aba.is-ativa, .pilula.is-ativa {
+  background: var(--ouro); border-color: var(--ouro); color: #10151b; font-weight: 600;
+}
+.aba.is-ativa i, .pilula.is-ativa i { background: rgba(16, 21, 27, .18); color: #10151b; }
+
+.catalogo__linha {
+  display: flex; flex-wrap: wrap; gap: 14px; align-items: center;
+  margin-top: 16px;
+}
+.catalogo__busca { position: relative; flex: 1 1 280px; display: flex; align-items: center; }
+.catalogo__busca svg {
+  position: absolute; left: 14px; width: 17px; height: 17px; color: var(--texto-fraco);
+  pointer-events: none;
+}
+.catalogo__busca input {
+  width: 100%; padding: 12px 14px 12px 42px;
+  border: 1px solid var(--ouro-borda); border-radius: 10px;
+  background: rgba(13, 26, 31, .55); color: var(--texto);
+  font: 400 .92rem/1.2 var(--sans);
+}
+.catalogo__busca input::placeholder { color: var(--texto-fraco); }
+.catalogo__busca input:focus-visible { outline: 2px solid var(--ouro-claro); outline-offset: 1px; }
+.catalogo__status { display: flex; flex-wrap: wrap; gap: 8px; }
+
+.catalogo__conta {
+  margin: 20px 0 0; font: 400 .82rem/1.5 var(--mono);
+  letter-spacing: .04em; color: var(--texto-fraco);
+}
+
+.catalogo__lista {
+  list-style: none; margin: 18px 0 0; padding: 0;
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 14px;
+}
+.aula {
+  position: relative; display: flex; flex-direction: column; gap: 6px;
+  padding: 18px 18px 16px; border-radius: 12px;
+  border: 1px solid var(--ouro-borda); background: var(--cartao);
+  transition: border-color 260ms, transform 260ms var(--suave);
+}
+.aula:hover { border-color: rgba(212, 166, 58, .5); transform: translateY(-2px); }
+.aula__data { font: 500 .72rem/1 var(--mono); letter-spacing: .08em; color: var(--ouro); }
+.aula__titulo { margin: 0; font: 600 1rem/1.35 var(--sans); color: var(--texto); }
+.aula__tema { font-size: .8rem; color: var(--texto-fraco); }
+.aula__selo {
+  align-self: flex-start; margin-top: 6px; padding: 4px 9px; border-radius: 6px;
+  font: 500 .68rem/1.3 var(--mono); letter-spacing: .08em; text-transform: uppercase;
+}
+.aula__selo--gravada { background: rgba(212, 166, 58, .16); color: var(--ouro-claro); }
+.aula__selo--planejada { background: rgba(138, 153, 173, .14); color: var(--texto-fraco); }
+.aula.esta-oculta { display: none; }
+
+.catalogo__vazio { margin: 26px 0 0; color: var(--texto-fraco); }
+.catalogo__mais { margin-top: 22px; }
+.catalogo__cta { margin-top: 44px; text-align: center; }
+.catalogo__nota {
+  margin: 20px auto 0; max-width: 60ch;
+  font-size: .84rem; line-height: 1.6; color: var(--texto-fraco);
+}
+
+@media (max-width: 620px) {
+  .catalogo__lista { grid-template-columns: 1fr; }
+  .aba, .pilula { padding: 9px 12px; font-size: .78rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .aula, .aba, .pilula { transition: none; }
+  .aula:hover { transform: none; }
+}

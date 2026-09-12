@@ -50,6 +50,7 @@
     <a href="#constelacao">Constelação</a>
     <a href="#amostra">Amostra</a>
     <a href="#documentacao">Números</a>
+    <a href="#temporadas">Temporadas</a>
     <a href="#julio">Sobre</a>
     <a href="#duvidas">Dúvidas</a>
     <a href="#contato">Contato</a>
@@ -247,14 +248,1039 @@
     <p class="olho" data-revelar>Documentação real</p>
     <h2 class="titulo-grande" data-revelar>O que existe <em>hoje, agora</em>.</h2>
     <div class="numeros">
-      <div data-montar><span class="numero" data-contar="52">0</span><h3>aulas gravadas</h3>
-        <p>25 da Temporada 0, 13 da Temporada 1 e 14 aulas lineares. Disponíveis desde o primeiro dia.</p></div>
-      <div data-montar><span class="numero" data-contar="73">0</span><h3>aulas planejadas</h3>
-        <p>O mapa das Temporadas 2 e 3, e o restante da 1. Marcadas como planejadas, porque ainda são.</p></div>
+      <div data-montar><span class="numero" data-contar="54">0</span><h3>aulas gravadas</h3>
+        <p>25 da Temporada 0, 13 da Temporada 1, 14 lineares e 2 semanas do desafio.
+          Disponíveis desde o primeiro dia. Confira uma a uma
+          <a href="#temporadas">no catálogo</a>.</p></div>
+      <div data-montar><span class="numero" data-contar="84">0</span><h3>aulas planejadas</h3>
+        <p>16 restantes da Temporada 1, 27 da 2, 27 da 3 e 14 semanas do desafio. Marcadas como
+          planejadas, porque ainda são.</p></div>
       <div data-montar><span class="numero"><span data-contar="5">0</span><i>/16</i></span><h3>semanas do desafio</h3>
         <p>O protocolo de 16 semanas aplicado em mim mesmo, gravado toda semana. Começou em 09/08/2026.</p></div>
     </div>
   </section>
+
+<!-- TEMPORADAS:INICIO (gerado por gerar-temporadas.py) -->
+  <section id="temporadas" class="cena faixa">
+    <p class="olho" data-revelar>Centro de treino em tempo real</p>
+    <h2 class="titulo-grande" data-revelar>As <em>Temporadas</em></h2>
+    <blockquote class="citacao" data-revelar>Cada temporada é uma sala de treino diferente, gravada
+      em tempo real, com data e hora. Você não assina um tema, assina o centro inteiro.</blockquote>
+
+    <div class="catalogo" data-catalogo>
+      <div class="catalogo__abas" aria-label="Filtrar por temporada" role="group">
+          <button type="button" class="aba is-ativa" data-temporada="all" aria-pressed="true">Todas <i>138</i></button>
+          <button type="button" class="aba" data-temporada="0" aria-pressed="false" title="Geral">Temp. 0 <i>25</i></button>
+          <button type="button" class="aba" data-temporada="1" aria-pressed="false" title="Produtividade">Temp. 1 <i>29</i></button>
+          <button type="button" class="aba" data-temporada="L" aria-pressed="false" title="Aulas soltas">Lineares <i>14</i></button>
+          <button type="button" class="aba" data-temporada="D" aria-pressed="false" title="Estudo de caso">Desafio <i>16</i></button>
+          <button type="button" class="aba" data-temporada="2" aria-pressed="false" title="Aprendizagem">Temp. 2 <i>27</i></button>
+          <button type="button" class="aba" data-temporada="3" aria-pressed="false" title="Comunicação">Temp. 3 <i>27</i></button>
+      </div>
+
+      <div class="catalogo__linha">
+        <div class="catalogo__busca">
+          <label class="so-leitor" for="busca-aula">Buscar aula por título ou tema</label>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+          </svg>
+          <input id="busca-aula" type="search" data-busca autocomplete="off"
+                 placeholder="Buscar por título ou tema…">
+        </div>
+        <div class="catalogo__status" aria-label="Filtrar por situação" role="group">
+          <button type="button" class="pilula is-ativa" data-status="all" aria-pressed="true">Todas</button>
+          <button type="button" class="pilula" data-status="recorded" aria-pressed="false">Gravadas <i>54</i></button>
+          <button type="button" class="pilula" data-status="planned" aria-pressed="false">Planejadas <i>84</i></button>
+        </div>
+      </div>
+
+      <p class="catalogo__conta" data-conta aria-live="polite">
+        138 aulas no catálogo · 54 gravadas, disponíveis agora · 84 planejadas
+      </p>
+
+      <ul class="catalogo__lista" data-lista>
+        <li class="aula" data-temporada="0" data-status="recorded"
+            data-texto="o novo jeito de consumir cursos online generalismo &amp; metodo">
+          <span class="aula__data">16.01.2026</span>
+          <h3 class="aula__titulo">O novo jeito de consumir cursos online</h3>
+          <span class="aula__tema">Generalismo &amp; Método</span>
+          <span class="aula__selo aula__selo--gravada">Gravada</span>
+        </li>
+        <li class="aula" data-temporada="0" data-status="recorded"
+            data-texto="ansiedade e identidade psicologia &amp; mente">
+          <span class="aula__data">17.01.2026</span>
+          <h3 class="aula__titulo">Ansiedade e identidade</h3>
+          <span class="aula__tema">Psicologia &amp; Mente</span>
+          <span class="aula__selo aula__selo--gravada">Gravada</span>
+        </li>
+        <li class="aula" data-temporada="0" data-status="recorded"
+            data-texto="taxonomia de conhecimento aprendizagem">
+          <span class="aula__data">19.01.2026</span>
+          <h3 class="aula__titulo">Taxonomia de conhecimento</h3>
+          <span class="aula__tema">Aprendizagem</span>
+          <span class="aula__selo aula__selo--gravada">Gravada</span>
+        </li>
+        <li class="aula" data-temporada="0" data-status="recorded"
+            data-texto="homem masculinidade &amp; identidade">
+          <span class="aula__data">20.01.2026</span>
+          <h3 class="aula__titulo">Homem</h3>
+          <span class="aula__tema">Masculinidade &amp; Identidade</span>
+          <span class="aula__selo aula__selo--gravada">Gravada</span>
+        </li>
+        <li class="aula" data-temporada="0" data-status="recorded"
+            data-texto="um meio para controlar pensamentos controle da mente">
+          <span class="aula__data">22.01.2026</span>
+          <h3 class="aula__titulo">Um meio para controlar pensamentos</h3>
+          <span class="aula__tema">Controle da Mente</span>
+          <span class="aula__selo aula__selo--gravada">Gravada</span>
+        </li>
+        <li class="aula" data-temporada="0" data-status="recorded"
+            data-texto="desistencia e disciplina disciplina &amp; resiliencia">
+          <span class="aula__data">23.01.2026</span>
+          <h3 class="aula__titulo">Desistência e disciplina</h3>
+          <span class="aula__tema">Disciplina &amp; Resiliência</span>
+          <span class="aula__selo aula__selo--gravada">Gravada</span>
+        </li>
+        <li class="aula" data-temporada="0" data-status="recorded"
+            data-texto="a chave do sucesso filosofia pratica">
+          <span class="aula__data">30.01.2026</span>
+          <h3 class="aula__titulo">A chave do sucesso</h3>
+          <span class="aula__tema">Filosofia Prática</span>
+          <span class="aula__selo aula__selo--gravada">Gravada</span>
+        </li>
+        <li class="aula" data-temporada="0" data-status="recorded"
+            data-texto="esporte coletivo rotina &amp; corpo">
+          <span class="aula__data">31.01.2026</span>
+          <h3 class="aula__titulo">Esporte coletivo</h3>
+          <span class="aula__tema">Rotina &amp; Corpo</span>
+          <span class="aula__selo aula__selo--gravada">Gravada</span>
+        </li>
+        <li class="aula" data-temporada="0" data-status="recorded"
+            data-texto="para os que sempre desistem persistencia">
+          <span class="aula__data">03.02.2026</span>
+          <h3 class="aula__titulo">Para os que sempre desistem</h3>
+          <span class="aula__tema">Persistência</span>
+          <span class="aula__selo aula__selo--gravada">Gravada</span>
+        </li>
+        <li class="aula" data-temporada="0" data-status="recorded"
+            data-texto="sobre as metas de ano-novo e o mes de marco metas &amp; planejamento">
+          <span class="aula__data">11.02.2026</span>
+          <h3 class="aula__titulo">Sobre as metas de ano-novo e o mês de março</h3>
+          <span class="aula__tema">Metas &amp; Planejamento</span>
+          <span class="aula__selo aula__selo--gravada">Gravada</span>
+        </li>
+        <li class="aula" data-temporada="0" data-status="recorded"
+            data-texto="quer ser bom? aprenda a ser ruim medo de errar">
+          <span class="aula__data">20.02.2026</span>
+          <h3 class="aula__titulo">Quer ser bom? Aprenda a ser ruim</h3>
+          <span class="aula__tema">Medo de Errar</span>
+          <span class="aula__selo aula__selo--gravada">Gravada</span>
+        </li>
+        <li class="aula" data-temporada="0" data-status="recorded"
+            data-texto="e-mail: multiplos interesses e estudos generalismo">
+          <span class="aula__data">25.02.2026</span>
+          <h3 class="aula__titulo">e-mail: múltiplos interesses e estudos</h3>
+          <span class="aula__tema">Generalismo</span>
+          <span class="aula__selo aula__selo--gravada">Gravada</span>
+        </li>
+        <li class="aula" data-temporada="0" data-status="recorded"
+            data-texto="como falar. comunicacao">
+          <span class="aula__data">04.03.2026</span>
+          <h3 class="aula__titulo">Como falar.</h3>
+          <span class="aula__tema">Comunicação</span>
+          <span class="aula__selo aula__selo--gravada">Gravada</span>
+        </li>
+        <li class="aula" data-temporada="0" data-status="recorded"
+            data-texto="como ser bem-sucedido? sucesso &amp; carreira">
+          <span class="aula__data">06.03.2026</span>
+          <h3 class="aula__titulo">Como ser bem-sucedido?</h3>
+          <span class="aula__tema">Sucesso &amp; Carreira</span>
+          <span class="aula__selo aula__selo--gravada">Gravada</span>
+        </li>
+        <li class="aula" data-temporada="0" data-status="recorded"
+            data-texto="seja util e cale a boca postura &amp; acao">
+          <span class="aula__data">10.03.2026</span>
+          <h3 class="aula__titulo">Seja útil e cale a boca</h3>
+          <span class="aula__tema">Postura &amp; Ação</span>
+          <span class="aula__selo aula__selo--gravada">Gravada</span>
+        </li>
+        <li class="aula" data-temporada="0" data-status="recorded"
+            data-texto="como se sentir motivado motivacao">
+          <span class="aula__data">13.03.2026</span>
+          <h3 class="aula__titulo">Como se sentir motivado</h3>
+          <span class="aula__tema">Motivação</span>
+          <span class="aula__selo aula__selo--gravada">Gravada</span>
+        </li>
+        <li class="aula" data-temporada="0" data-status="recorded"
+            data-texto="venca o medo de errar autoestima">
+          <span class="aula__data">20.03.2026</span>
+          <h3 class="aula__titulo">Vença o medo de errar</h3>
+          <span class="aula__tema">Autoestima</span>
+          <span class="aula__selo aula__selo--gravada">Gravada</span>
+        </li>
+        <li class="aula" data-temporada="0" data-status="recorded"
+            data-texto="veja quando estiver paralisado com a rotina rotina &amp; foco">
+          <span class="aula__data">22.03.2026</span>
+          <h3 class="aula__titulo">Veja quando estiver paralisado com a rotina</h3>
+          <span class="aula__tema">Rotina &amp; Foco</span>
+          <span class="aula__selo aula__selo--gravada">Gravada</span>
+        </li>
+        <li class="aula" data-temporada="0" data-status="recorded"
+            data-texto="aprenda a resolver problemas resolucao de problemas">
+          <span class="aula__data">24.03.2026</span>
+          <h3 class="aula__titulo">Aprenda a resolver problemas</h3>
+          <span class="aula__tema">Resolução de Problemas</span>
+          <span class="aula__selo aula__selo--gravada">Gravada</span>
+        </li>
+        <li class="aula" data-temporada="0" data-status="recorded"
+            data-texto="a arte de memorizar tudo memoria">
+          <span class="aula__data">03.04.2026</span>
+          <h3 class="aula__titulo">A arte de memorizar tudo</h3>
+          <span class="aula__tema">Memória</span>
+          <span class="aula__selo aula__selo--gravada">Gravada</span>
+        </li>
+        <li class="aula" data-temporada="0" data-status="recorded"
+            data-texto="dias dificeis/momentos dificeis inteligencia emocional">
+          <span class="aula__data">20.04.2026</span>
+          <h3 class="aula__titulo">Dias difíceis/momentos difíceis</h3>
+          <span class="aula__tema">Inteligência Emocional</span>
+          <span class="aula__selo aula__selo--gravada">Gravada</span>
+        </li>
+        <li class="aula" data-temporada="0" data-status="recorded"
+            data-texto="apenas continue. disciplina">
+          <span class="aula__data">29.04.2026</span>
+          <h3 class="aula__titulo">Apenas continue.</h3>
+          <span class="aula__tema">Disciplina</span>
+          <span class="aula__selo aula__selo--gravada">Gravada</span>
+        </li>
+        <li class="aula" data-temporada="0" data-status="recorded"
+            data-texto="aprenda o minimo de ia (eu to implorando) inteligencia artificial">
+          <span class="aula__data">10.05.2026</span>
+          <h3 class="aula__titulo">Aprenda o mínimo de IA (eu tô implorando)</h3>
+          <span class="aula__tema">Inteligência Artificial</span>
+          <span class="aula__selo aula__selo--gravada">Gravada</span>
+        </li>
+        <li class="aula" data-temporada="0" data-status="recorded"
+            data-texto="decida onde voce vai falhar tomada de decisao">
+          <span class="aula__data">09.06.2026</span>
+          <h3 class="aula__titulo">Decida onde você vai falhar</h3>
+          <span class="aula__tema">Tomada de Decisão</span>
+          <span class="aula__selo aula__selo--gravada">Gravada</span>
+        </li>
+        <li class="aula" data-temporada="0" data-status="recorded"
+            data-texto="a importancia da leveza equilibrio">
+          <span class="aula__data">20.06.2026</span>
+          <h3 class="aula__titulo">A importância da leveza</h3>
+          <span class="aula__tema">Equilíbrio</span>
+          <span class="aula__selo aula__selo--gravada">Gravada</span>
+        </li>
+        <li class="aula" data-temporada="1" data-status="recorded"
+            data-texto="tudo que voce precisa saber produtividade base">
+          <span class="aula__data">18.08.2026</span>
+          <h3 class="aula__titulo">Tudo que você precisa saber</h3>
+          <span class="aula__tema">Produtividade Base</span>
+          <span class="aula__selo aula__selo--gravada">Gravada</span>
+        </li>
+        <li class="aula" data-temporada="1" data-status="recorded"
+            data-texto="nao declare derrota mindset &amp; foco">
+          <span class="aula__data">20.08.2026</span>
+          <h3 class="aula__titulo">NÃO DECLARE DERROTA</h3>
+          <span class="aula__tema">Mindset &amp; Foco</span>
+          <span class="aula__selo aula__selo--gravada">Gravada</span>
+        </li>
+        <li class="aula" data-temporada="1" data-status="recorded"
+            data-texto="o que os disciplinados temem e falta em voce disciplina">
+          <span class="aula__data">20.08.2026</span>
+          <h3 class="aula__titulo">O que os disciplinados temem e falta em você</h3>
+          <span class="aula__tema">Disciplina</span>
+          <span class="aula__selo aula__selo--gravada">Gravada</span>
+        </li>
+        <li class="aula" data-temporada="1" data-status="recorded"
+            data-texto="um papo cabeca para quem pensar em mudar o percurso. tomada de decisao">
+          <span class="aula__data">25.08.2026</span>
+          <h3 class="aula__titulo">Um papo cabeça para quem pensar em mudar o percurso.</h3>
+          <span class="aula__tema">Tomada de Decisão</span>
+          <span class="aula__selo aula__selo--gravada">Gravada</span>
+        </li>
+        <li class="aula" data-temporada="1" data-status="recorded"
+            data-texto="moedor de sonhos e crise existencial crise existencial">
+          <span class="aula__data">02.09.2026</span>
+          <h3 class="aula__titulo">Moedor de sonhos e crise existencial</h3>
+          <span class="aula__tema">Crise Existencial</span>
+          <span class="aula__selo aula__selo--gravada">Gravada</span>
+        </li>
+        <li class="aula" data-temporada="1" data-status="recorded"
+            data-texto="aos ex-prodigios autoestima">
+          <span class="aula__data">02.09.2026</span>
+          <h3 class="aula__titulo">Aos ex-prodígios</h3>
+          <span class="aula__tema">Autoestima</span>
+          <span class="aula__selo aula__selo--gravada">Gravada</span>
+        </li>
+        <li class="aula" data-temporada="1" data-status="recorded"
+            data-texto="como fazer o desafio? [a planilha] execucao &amp; ferramentas">
+          <span class="aula__data">02.09.2026</span>
+          <h3 class="aula__titulo">Como fazer o desafio? [A PLANILHA]</h3>
+          <span class="aula__tema">Execução &amp; Ferramentas</span>
+          <span class="aula__selo aula__selo--gravada">Gravada</span>
+        </li>
+        <li class="aula" data-temporada="1" data-status="recorded"
+            data-texto="por que fazer o desafio? proposito">
+          <span class="aula__data">03.09.2026</span>
+          <h3 class="aula__titulo">Por que fazer o desafio?</h3>
+          <span class="aula__tema">Propósito</span>
+          <span class="aula__selo aula__selo--gravada">Gravada</span>
+        </li>
+        <li class="aula" data-temporada="1" data-status="recorded"
+            data-texto="autoestima [conquistas x autopercepcao de valor] psicologia">
+          <span class="aula__data">03.09.2026</span>
+          <h3 class="aula__titulo">Autoestima [Conquistas x Autopercepção de valor]</h3>
+          <span class="aula__tema">Psicologia</span>
+          <span class="aula__selo aula__selo--gravada">Gravada</span>
+        </li>
+        <li class="aula" data-temporada="1" data-status="recorded"
+            data-texto="motivacao: o neurotransmissor do sucesso ou do fracasso. neurociencia &amp; motivacao">
+          <span class="aula__data">03.09.2026</span>
+          <h3 class="aula__titulo">MOTIVAÇÃO: O neurotransmissor do sucesso ou do fracasso.</h3>
+          <span class="aula__tema">Neurociência &amp; Motivação</span>
+          <span class="aula__selo aula__selo--gravada">Gravada</span>
+        </li>
+        <li class="aula" data-temporada="1" data-status="recorded"
+            data-texto="voos de galinha consistencia">
+          <span class="aula__data">03.09.2026</span>
+          <h3 class="aula__titulo">Vôos de galinha</h3>
+          <span class="aula__tema">Consistência</span>
+          <span class="aula__selo aula__selo--gravada">Gravada</span>
+        </li>
+        <li class="aula" data-temporada="1" data-status="recorded"
+            data-texto="gestao de energia, nao gestao de tempo energia &amp; foco">
+          <span class="aula__data">07.09.2026</span>
+          <h3 class="aula__titulo">Gestão de energia, não gestão de tempo</h3>
+          <span class="aula__tema">Energia &amp; Foco</span>
+          <span class="aula__selo aula__selo--gravada">Gravada</span>
+        </li>
+        <li class="aula" data-temporada="1" data-status="recorded"
+            data-texto="o mito da forca de vontade psicologia &amp; habito">
+          <span class="aula__data">07.09.2026</span>
+          <h3 class="aula__titulo">O mito da força de vontade</h3>
+          <span class="aula__tema">Psicologia &amp; Hábito</span>
+          <span class="aula__selo aula__selo--gravada">Gravada</span>
+        </li>
+        <li class="aula" data-temporada="1" data-status="planned"
+            data-texto="por que voce procrastina o que mais importa procrastinacao">
+          <span class="aula__data">Planejada</span>
+          <h3 class="aula__titulo">Por que você procrastina o que mais importa</h3>
+          <span class="aula__tema">Procrastinação</span>
+          <span class="aula__selo aula__selo--planejada">Planejada</span>
+        </li>
+        <li class="aula" data-temporada="1" data-status="planned"
+            data-texto="a raiz emocional da procrastinacao emocao &amp; acao">
+          <span class="aula__data">Planejada</span>
+          <h3 class="aula__titulo">A raiz emocional da procrastinação</h3>
+          <span class="aula__tema">Emoção &amp; Ação</span>
+          <span class="aula__selo aula__selo--planejada">Planejada</span>
+        </li>
+        <li class="aula" data-temporada="1" data-status="planned"
+            data-texto="sono, o produtor de resultado invisivel recuperacao &amp; sono">
+          <span class="aula__data">Planejada</span>
+          <h3 class="aula__titulo">Sono, o produtor de resultado invisível</h3>
+          <span class="aula__tema">Recuperação &amp; Sono</span>
+          <span class="aula__selo aula__selo--planejada">Planejada</span>
+        </li>
+        <li class="aula" data-temporada="1" data-status="planned"
+            data-texto="foco e um musculo, nao um dom atencao">
+          <span class="aula__data">Planejada</span>
+          <h3 class="aula__titulo">Foco é um músculo, não um dom</h3>
+          <span class="aula__tema">Atenção</span>
+          <span class="aula__selo aula__selo--planejada">Planejada</span>
+        </li>
+        <li class="aula" data-temporada="1" data-status="planned"
+            data-texto="a tirania do multitarefa brain fog">
+          <span class="aula__data">Planejada</span>
+          <h3 class="aula__titulo">A tirania do multitarefa</h3>
+          <span class="aula__tema">Brain fog</span>
+          <span class="aula__selo aula__selo--planejada">Planejada</span>
+        </li>
+        <li class="aula" data-temporada="1" data-status="planned"
+            data-texto="como priorizar quando tudo parece urgente prioridades">
+          <span class="aula__data">Planejada</span>
+          <h3 class="aula__titulo">Como priorizar quando tudo parece urgente</h3>
+          <span class="aula__tema">Prioridades</span>
+          <span class="aula__selo aula__selo--planejada">Planejada</span>
+        </li>
+        <li class="aula" data-temporada="1" data-status="planned"
+            data-texto="metas vagas geram esforco vago metas">
+          <span class="aula__data">Planejada</span>
+          <h3 class="aula__titulo">Metas vagas geram esforço vago</h3>
+          <span class="aula__tema">Metas</span>
+          <span class="aula__selo aula__selo--planejada">Planejada</span>
+        </li>
+        <li class="aula" data-temporada="1" data-status="planned"
+            data-texto="o poder da friccao: facilite o certo, dificulte o errado arquitetura de escolha">
+          <span class="aula__data">Planejada</span>
+          <h3 class="aula__titulo">O poder da fricção: facilite o certo, dificulte o errado</h3>
+          <span class="aula__tema">Arquitetura de Escolha</span>
+          <span class="aula__selo aula__selo--planejada">Planejada</span>
+        </li>
+        <li class="aula" data-temporada="1" data-status="planned"
+            data-texto="autorregulacao: o adulto que observa voce mesmo autorregulacao">
+          <span class="aula__data">Planejada</span>
+          <h3 class="aula__titulo">Autorregulação: o adulto que observa você mesmo</h3>
+          <span class="aula__tema">Autorregulação</span>
+          <span class="aula__selo aula__selo--planejada">Planejada</span>
+        </li>
+        <li class="aula" data-temporada="1" data-status="planned"
+            data-texto="energia mental tem picos e vales, descubra os seus ritmo biologico">
+          <span class="aula__data">Planejada</span>
+          <h3 class="aula__titulo">Energia mental tem picos e vales, descubra os seus</h3>
+          <span class="aula__tema">Ritmo Biológico</span>
+          <span class="aula__selo aula__selo--planejada">Planejada</span>
+        </li>
+        <li class="aula" data-temporada="1" data-status="planned"
+            data-texto="descanso nao e o oposto de produtividade recuperacao">
+          <span class="aula__data">Planejada</span>
+          <h3 class="aula__titulo">Descanso não é o oposto de produtividade</h3>
+          <span class="aula__tema">Recuperação</span>
+          <span class="aula__selo aula__selo--planejada">Planejada</span>
+        </li>
+        <li class="aula" data-temporada="1" data-status="planned"
+            data-texto="como recomecar depois de uma semana perdida resiliencia">
+          <span class="aula__data">Planejada</span>
+          <h3 class="aula__titulo">Como recomeçar depois de uma semana perdida</h3>
+          <span class="aula__tema">Resiliência</span>
+          <span class="aula__selo aula__selo--planejada">Planejada</span>
+        </li>
+        <li class="aula" data-temporada="1" data-status="planned"
+            data-texto="o perfeccionismo que trava mais do que ajuda perfeccionismo">
+          <span class="aula__data">Planejada</span>
+          <h3 class="aula__titulo">O perfeccionismo que trava mais do que ajuda</h3>
+          <span class="aula__tema">Perfeccionismo</span>
+          <span class="aula__selo aula__selo--planejada">Planejada</span>
+        </li>
+        <li class="aula" data-temporada="1" data-status="planned"
+            data-texto="feedback: o combustivel que ninguem pede feedback">
+          <span class="aula__data">Planejada</span>
+          <h3 class="aula__titulo">Feedback: o combustível que ninguém pede</h3>
+          <span class="aula__tema">Feedback</span>
+          <span class="aula__selo aula__selo--planejada">Planejada</span>
+        </li>
+        <li class="aula" data-temporada="1" data-status="planned"
+            data-texto="a diferenca entre estar ocupado e estar avancando progresso real">
+          <span class="aula__data">Planejada</span>
+          <h3 class="aula__titulo">A diferença entre estar ocupado e estar avançando</h3>
+          <span class="aula__tema">Progresso Real</span>
+          <span class="aula__selo aula__selo--planejada">Planejada</span>
+        </li>
+        <li class="aula" data-temporada="1" data-status="planned"
+            data-texto="ambientes que produzem por voce ambiente">
+          <span class="aula__data">Planejada</span>
+          <h3 class="aula__titulo">Ambientes que produzem por você</h3>
+          <span class="aula__tema">Ambiente</span>
+          <span class="aula__selo aula__selo--planejada">Planejada</span>
+        </li>
+        <li class="aula" data-temporada="2" data-status="planned"
+            data-texto="aprender rapido e aprender errado aprendizagem">
+          <span class="aula__data">Planejada</span>
+          <h3 class="aula__titulo">Aprender rápido é aprender errado</h3>
+          <span class="aula__tema">Aprendizagem</span>
+          <span class="aula__selo aula__selo--planejada">Planejada</span>
+        </li>
+        <li class="aula" data-temporada="2" data-status="planned"
+            data-texto="repeticao espacada: o segredo que a escola nao te contou memoria">
+          <span class="aula__data">Planejada</span>
+          <h3 class="aula__titulo">Repetição espaçada: o segredo que a escola não te contou</h3>
+          <span class="aula__tema">Memória</span>
+          <span class="aula__selo aula__selo--planejada">Planejada</span>
+        </li>
+        <li class="aula" data-temporada="2" data-status="planned"
+            data-texto="pratica deliberada, o que separa amador de especialista talento &amp; pratica">
+          <span class="aula__data">Planejada</span>
+          <h3 class="aula__titulo">Prática deliberada, o que separa amador de especialista</h3>
+          <span class="aula__tema">Talento &amp; Prática</span>
+          <span class="aula__selo aula__selo--planejada">Planejada</span>
+        </li>
+        <li class="aula" data-temporada="2" data-status="planned"
+            data-texto="a curiosidade que a escola matou em voce curiosidade">
+          <span class="aula__data">Planejada</span>
+          <h3 class="aula__titulo">A curiosidade que a escola matou em você</h3>
+          <span class="aula__tema">Curiosidade</span>
+          <span class="aula__selo aula__selo--planejada">Planejada</span>
+        </li>
+        <li class="aula" data-temporada="2" data-status="planned"
+            data-texto="metacognicao: pensar sobre o seu proprio pensar metacognicao">
+          <span class="aula__data">Planejada</span>
+          <h3 class="aula__titulo">Metacognição: pensar sobre o seu próprio pensar</h3>
+          <span class="aula__tema">Metacognição</span>
+          <span class="aula__selo aula__selo--planejada">Planejada</span>
+        </li>
+        <li class="aula" data-temporada="2" data-status="planned"
+            data-texto="por que voce esquece quase tudo que estuda retencao">
+          <span class="aula__data">Planejada</span>
+          <h3 class="aula__titulo">Por que você esquece quase tudo que estuda</h3>
+          <span class="aula__tema">Retenção</span>
+          <span class="aula__selo aula__selo--planejada">Planejada</span>
+        </li>
+        <li class="aula" data-temporada="2" data-status="planned"
+            data-texto="o erro e a materia-prima do aprendizado medo de errar">
+          <span class="aula__data">Planejada</span>
+          <h3 class="aula__titulo">O erro é a matéria-prima do aprendizado</h3>
+          <span class="aula__tema">Medo de Errar</span>
+          <span class="aula__selo aula__selo--planejada">Planejada</span>
+        </li>
+        <li class="aula" data-temporada="2" data-status="planned"
+            data-texto="ensinar e a forma mais rapida de aprender tecnica feynman">
+          <span class="aula__data">Planejada</span>
+          <h3 class="aula__titulo">Ensinar é a forma mais rápida de aprender</h3>
+          <span class="aula__tema">Técnica Feynman</span>
+          <span class="aula__selo aula__selo--planejada">Planejada</span>
+        </li>
+        <li class="aula" data-temporada="2" data-status="planned"
+            data-texto="como ler um livro dificil sem desistir leitura profunda">
+          <span class="aula__data">Planejada</span>
+          <h3 class="aula__titulo">Como ler um livro difícil sem desistir</h3>
+          <span class="aula__tema">Leitura Profunda</span>
+          <span class="aula__selo aula__selo--planejada">Planejada</span>
+        </li>
+        <li class="aula" data-temporada="2" data-status="planned"
+            data-texto="a ilusao de competencia: por que reler nao e estudar estudos">
+          <span class="aula__data">Planejada</span>
+          <h3 class="aula__titulo">A ilusão de competência: por que reler não é estudar</h3>
+          <span class="aula__tema">Estudos</span>
+          <span class="aula__selo aula__selo--planejada">Planejada</span>
+        </li>
+        <li class="aula" data-temporada="2" data-status="planned"
+            data-texto="interleaving: misturar assuntos para aprender melhor generalismo">
+          <span class="aula__data">Planejada</span>
+          <h3 class="aula__titulo">Interleaving: misturar assuntos para aprender melhor</h3>
+          <span class="aula__tema">Generalismo</span>
+          <span class="aula__selo aula__selo--planejada">Planejada</span>
+        </li>
+        <li class="aula" data-temporada="2" data-status="planned"
+            data-texto="sono e consolidacao de memoria neurociencia">
+          <span class="aula__data">Planejada</span>
+          <h3 class="aula__titulo">Sono e consolidação de memória</h3>
+          <span class="aula__tema">Neurociência</span>
+          <span class="aula__selo aula__selo--planejada">Planejada</span>
+        </li>
+        <li class="aula" data-temporada="2" data-status="planned"
+            data-texto="como fazer perguntas melhores que as respostas pensamento critico">
+          <span class="aula__data">Planejada</span>
+          <h3 class="aula__titulo">Como fazer perguntas melhores que as respostas</h3>
+          <span class="aula__tema">Pensamento Crítico</span>
+          <span class="aula__selo aula__selo--planejada">Planejada</span>
+        </li>
+        <li class="aula" data-temporada="2" data-status="planned"
+            data-texto="transferencia de conhecimento entre areas diferentes polimatia">
+          <span class="aula__data">Planejada</span>
+          <h3 class="aula__titulo">Transferência de conhecimento entre áreas diferentes</h3>
+          <span class="aula__tema">Polimatia</span>
+          <span class="aula__selo aula__selo--planejada">Planejada</span>
+        </li>
+        <li class="aula" data-temporada="2" data-status="planned"
+            data-texto="o generalista aprende diferente do especialista generalismo">
+          <span class="aula__data">Planejada</span>
+          <h3 class="aula__titulo">O generalista aprende diferente do especialista</h3>
+          <span class="aula__tema">Generalismo</span>
+          <span class="aula__selo aula__selo--planejada">Planejada</span>
+        </li>
+        <li class="aula" data-temporada="2" data-status="planned"
+            data-texto="motivacao para aprender vem depois de entender o porque motivacao">
+          <span class="aula__data">Planejada</span>
+          <h3 class="aula__titulo">Motivação para aprender vem depois de entender o porquê</h3>
+          <span class="aula__tema">Motivação</span>
+          <span class="aula__selo aula__selo--planejada">Planejada</span>
+        </li>
+        <li class="aula" data-temporada="2" data-status="planned"
+            data-texto="mapas mentais funcionam, mas nao do jeito que voce pensa organizacao">
+          <span class="aula__data">Planejada</span>
+          <h3 class="aula__titulo">Mapas mentais funcionam, mas não do jeito que você pensa</h3>
+          <span class="aula__tema">Organização</span>
+          <span class="aula__selo aula__selo--planejada">Planejada</span>
+        </li>
+        <li class="aula" data-temporada="2" data-status="planned"
+            data-texto="a zona de desenvolvimento proximal: o ponto certo de desafio desafio">
+          <span class="aula__data">Planejada</span>
+          <h3 class="aula__titulo">A zona de desenvolvimento proximal: o ponto certo de desafio</h3>
+          <span class="aula__tema">Desafio</span>
+          <span class="aula__selo aula__selo--planejada">Planejada</span>
+        </li>
+        <li class="aula" data-temporada="2" data-status="planned"
+            data-texto="como estudar quando o assunto e chato disciplina">
+          <span class="aula__data">Planejada</span>
+          <h3 class="aula__titulo">Como estudar quando o assunto é chato</h3>
+          <span class="aula__tema">Disciplina</span>
+          <span class="aula__selo aula__selo--planejada">Planejada</span>
+        </li>
+        <li class="aula" data-temporada="2" data-status="planned"
+            data-texto="aprendizagem ativa x aprendizagem passiva metodos">
+          <span class="aula__data">Planejada</span>
+          <h3 class="aula__titulo">Aprendizagem ativa x aprendizagem passiva</h3>
+          <span class="aula__tema">Métodos</span>
+          <span class="aula__selo aula__selo--planejada">Planejada</span>
+        </li>
+        <li class="aula" data-temporada="2" data-status="planned"
+            data-texto="o papel da dificuldade produtiva no aprendizado real resiliencia">
+          <span class="aula__data">Planejada</span>
+          <h3 class="aula__titulo">O papel da dificuldade produtiva no aprendizado real</h3>
+          <span class="aula__tema">Resiliência</span>
+          <span class="aula__selo aula__selo--planejada">Planejada</span>
+        </li>
+        <li class="aula" data-temporada="2" data-status="planned"
+            data-texto="como organizar o conhecimento em rede, nao em lista taxonomia">
+          <span class="aula__data">Planejada</span>
+          <h3 class="aula__titulo">Como organizar o conhecimento em rede, não em lista</h3>
+          <span class="aula__tema">Taxonomia</span>
+          <span class="aula__selo aula__selo--planejada">Planejada</span>
+        </li>
+        <li class="aula" data-temporada="2" data-status="planned"
+            data-texto="a curva do esquecimento e como driblar ela memoria">
+          <span class="aula__data">Planejada</span>
+          <h3 class="aula__titulo">A curva do esquecimento e como driblar ela</h3>
+          <span class="aula__tema">Memória</span>
+          <span class="aula__selo aula__selo--planejada">Planejada</span>
+        </li>
+        <li class="aula" data-temporada="2" data-status="planned"
+            data-texto="aprender em publico, o compromisso que acelera o processo prestacao de contas">
+          <span class="aula__data">Planejada</span>
+          <h3 class="aula__titulo">Aprender em público, o compromisso que acelera o processo</h3>
+          <span class="aula__tema">Prestação de Contas</span>
+          <span class="aula__selo aula__selo--planejada">Planejada</span>
+        </li>
+        <li class="aula" data-temporada="2" data-status="planned"
+            data-texto="quando parar de estudar teoria e comecar a praticar pratica">
+          <span class="aula__data">Planejada</span>
+          <h3 class="aula__titulo">Quando parar de estudar teoria e começar a praticar</h3>
+          <span class="aula__tema">Prática</span>
+          <span class="aula__selo aula__selo--planejada">Planejada</span>
+        </li>
+        <li class="aula" data-temporada="2" data-status="planned"
+            data-texto="vieses cognitivos que sabotam seu julgamento psicologia">
+          <span class="aula__data">Planejada</span>
+          <h3 class="aula__titulo">Vieses cognitivos que sabotam seu julgamento</h3>
+          <span class="aula__tema">Psicologia</span>
+          <span class="aula__selo aula__selo--planejada">Planejada</span>
+        </li>
+        <li class="aula" data-temporada="2" data-status="planned"
+            data-texto="o papel do cochilo e do sono na criatividade e no insight insight">
+          <span class="aula__data">Planejada</span>
+          <h3 class="aula__titulo">O papel do cochilo e do sono na criatividade e no insight</h3>
+          <span class="aula__tema">Insight</span>
+          <span class="aula__selo aula__selo--planejada">Planejada</span>
+        </li>
+        <li class="aula" data-temporada="3" data-status="planned"
+            data-texto="falar bem nao e o mesmo que comunicar bem comunicacao base">
+          <span class="aula__data">Planejada</span>
+          <h3 class="aula__titulo">Falar bem não é o mesmo que comunicar bem</h3>
+          <span class="aula__tema">Comunicação Base</span>
+          <span class="aula__selo aula__selo--planejada">Planejada</span>
+        </li>
+        <li class="aula" data-temporada="3" data-status="planned"
+            data-texto="a primeira impressao se forma antes de voce abrir a boca linguagem corporal">
+          <span class="aula__data">Planejada</span>
+          <h3 class="aula__titulo">A primeira impressão se forma antes de você abrir a boca</h3>
+          <span class="aula__tema">Linguagem Corporal</span>
+          <span class="aula__selo aula__selo--planejada">Planejada</span>
+        </li>
+        <li class="aula" data-temporada="3" data-status="planned"
+            data-texto="escuta ativa, o ingrediente que falta em toda conversa escuta">
+          <span class="aula__data">Planejada</span>
+          <h3 class="aula__titulo">Escuta ativa, o ingrediente que falta em toda conversa</h3>
+          <span class="aula__tema">Escuta</span>
+          <span class="aula__selo aula__selo--planejada">Planejada</span>
+        </li>
+        <li class="aula" data-temporada="3" data-status="planned"
+            data-texto="por que ninguem lembra o que voce disse, so como fez sentir psicologia">
+          <span class="aula__data">Planejada</span>
+          <h3 class="aula__titulo">Por que ninguém lembra o que você disse, só como fez sentir</h3>
+          <span class="aula__tema">Psicologia</span>
+          <span class="aula__selo aula__selo--planejada">Planejada</span>
+        </li>
+        <li class="aula" data-temporada="3" data-status="planned"
+            data-texto="persuasao nao e manipulacao, e clareza com intencao persuasao">
+          <span class="aula__data">Planejada</span>
+          <h3 class="aula__titulo">Persuasão não é manipulação, é clareza com intenção</h3>
+          <span class="aula__tema">Persuasão</span>
+          <span class="aula__selo aula__selo--planejada">Planejada</span>
+        </li>
+        <li class="aula" data-temporada="3" data-status="planned"
+            data-texto="o silencio como ferramenta de comunicacao oratoria">
+          <span class="aula__data">Planejada</span>
+          <h3 class="aula__titulo">O silêncio como ferramenta de comunicação</h3>
+          <span class="aula__tema">Oratória</span>
+          <span class="aula__selo aula__selo--planejada">Planejada</span>
+        </li>
+        <li class="aula" data-temporada="3" data-status="planned"
+            data-texto="como discordar sem destruir a relacao relacoes">
+          <span class="aula__data">Planejada</span>
+          <h3 class="aula__titulo">Como discordar sem destruir a relação</h3>
+          <span class="aula__tema">Relações</span>
+          <span class="aula__selo aula__selo--planejada">Planejada</span>
+        </li>
+        <li class="aula" data-temporada="3" data-status="planned"
+            data-texto="storytelling, por que historias convencem mais que dados storytelling">
+          <span class="aula__data">Planejada</span>
+          <h3 class="aula__titulo">Storytelling, por que histórias convencem mais que dados</h3>
+          <span class="aula__tema">Storytelling</span>
+          <span class="aula__selo aula__selo--planejada">Planejada</span>
+        </li>
+        <li class="aula" data-temporada="3" data-status="planned"
+            data-texto="comunicacao nao violenta na pratica cnv">
+          <span class="aula__data">Planejada</span>
+          <h3 class="aula__titulo">Comunicação não violenta na prática</h3>
+          <span class="aula__tema">CNV</span>
+          <span class="aula__selo aula__selo--planejada">Planejada</span>
+        </li>
+        <li class="aula" data-temporada="3" data-status="planned"
+            data-texto="linguagem corporal, o que o seu corpo diz antes de voce expressao">
+          <span class="aula__data">Planejada</span>
+          <h3 class="aula__titulo">Linguagem corporal, o que o seu corpo diz antes de você</h3>
+          <span class="aula__tema">Expressão</span>
+          <span class="aula__selo aula__selo--planejada">Planejada</span>
+        </li>
+        <li class="aula" data-temporada="3" data-status="planned"
+            data-texto="como simplificar uma ideia complexa sem perder profundidade clareza">
+          <span class="aula__data">Planejada</span>
+          <h3 class="aula__titulo">Como simplificar uma ideia complexa sem perder profundidade</h3>
+          <span class="aula__tema">Clareza</span>
+          <span class="aula__selo aula__selo--planejada">Planejada</span>
+        </li>
+        <li class="aula" data-temporada="3" data-status="planned"
+            data-texto="o erro de comunicar para impressionar, nao para conectar conexao">
+          <span class="aula__data">Planejada</span>
+          <h3 class="aula__titulo">O erro de comunicar para impressionar, não para conectar</h3>
+          <span class="aula__tema">Conexão</span>
+          <span class="aula__selo aula__selo--planejada">Planejada</span>
+        </li>
+        <li class="aula" data-temporada="3" data-status="planned"
+            data-texto="perguntas que abrem conversas, perguntas que fecham perguntas">
+          <span class="aula__data">Planejada</span>
+          <h3 class="aula__titulo">Perguntas que abrem conversas, perguntas que fecham</h3>
+          <span class="aula__tema">Perguntas</span>
+          <span class="aula__selo aula__selo--planejada">Planejada</span>
+        </li>
+        <li class="aula" data-temporada="3" data-status="planned"
+            data-texto="como dar feedback que a pessoa realmente escuta feedback">
+          <span class="aula__data">Planejada</span>
+          <h3 class="aula__titulo">Como dar feedback que a pessoa realmente escuta</h3>
+          <span class="aula__tema">Feedback</span>
+          <span class="aula__selo aula__selo--planejada">Planejada</span>
+        </li>
+        <li class="aula" data-temporada="3" data-status="planned"
+            data-texto="a arte de pedir o que voce quer sem rodeios assertividade">
+          <span class="aula__data">Planejada</span>
+          <h3 class="aula__titulo">A arte de pedir o que você quer sem rodeios</h3>
+          <span class="aula__tema">Assertividade</span>
+          <span class="aula__selo aula__selo--planejada">Planejada</span>
+        </li>
+        <li class="aula" data-temporada="3" data-status="planned"
+            data-texto="comunicacao assertiva, nem passivo, nem agressivo postura">
+          <span class="aula__data">Planejada</span>
+          <h3 class="aula__titulo">Comunicação assertiva, nem passivo, nem agressivo</h3>
+          <span class="aula__tema">Postura</span>
+          <span class="aula__selo aula__selo--planejada">Planejada</span>
+        </li>
+        <li class="aula" data-temporada="3" data-status="planned"
+            data-texto="como ler o clima emocional de uma conversa empatia">
+          <span class="aula__data">Planejada</span>
+          <h3 class="aula__titulo">Como ler o clima emocional de uma conversa</h3>
+          <span class="aula__tema">Empatia</span>
+          <span class="aula__selo aula__selo--planejada">Planejada</span>
+        </li>
+        <li class="aula" data-temporada="3" data-status="planned"
+            data-texto="falar em publico, o medo que todo mundo finge nao ter falar em publico">
+          <span class="aula__data">Planejada</span>
+          <h3 class="aula__titulo">Falar em público, o medo que todo mundo finge não ter</h3>
+          <span class="aula__tema">Falar em Público</span>
+          <span class="aula__selo aula__selo--planejada">Planejada</span>
+        </li>
+        <li class="aula" data-temporada="3" data-status="planned"
+            data-texto="o poder do nome proprio numa conversa relacoes">
+          <span class="aula__data">Planejada</span>
+          <h3 class="aula__titulo">O poder do nome próprio numa conversa</h3>
+          <span class="aula__tema">Relações</span>
+          <span class="aula__selo aula__selo--planejada">Planejada</span>
+        </li>
+        <li class="aula" data-temporada="3" data-status="planned"
+            data-texto="como encerrar uma conversa dificil sem deixar magoa conflitos">
+          <span class="aula__data">Planejada</span>
+          <h3 class="aula__titulo">Como encerrar uma conversa difícil sem deixar mágoa</h3>
+          <span class="aula__tema">Conflitos</span>
+          <span class="aula__selo aula__selo--planejada">Planejada</span>
+        </li>
+        <li class="aula" data-temporada="3" data-status="planned"
+            data-texto="a diferenca entre informar e convencer persuasao">
+          <span class="aula__data">Planejada</span>
+          <h3 class="aula__titulo">A diferença entre informar e convencer</h3>
+          <span class="aula__tema">Persuasão</span>
+          <span class="aula__selo aula__selo--planejada">Planejada</span>
+        </li>
+        <li class="aula" data-temporada="3" data-status="planned"
+            data-texto="comunicacao escrita, por que clareza e gentileza escrita">
+          <span class="aula__data">Planejada</span>
+          <h3 class="aula__titulo">Comunicação escrita, por que clareza é gentileza</h3>
+          <span class="aula__tema">Escrita</span>
+          <span class="aula__selo aula__selo--planejada">Planejada</span>
+        </li>
+        <li class="aula" data-temporada="3" data-status="planned"
+            data-texto="como negociar sem tratar o outro como adversario negociacao">
+          <span class="aula__data">Planejada</span>
+          <h3 class="aula__titulo">Como negociar sem tratar o outro como adversário</h3>
+          <span class="aula__tema">Negociação</span>
+          <span class="aula__selo aula__selo--planejada">Planejada</span>
+        </li>
+        <li class="aula" data-temporada="3" data-status="planned"
+            data-texto="o que sua voz comunica alem das palavras voz &amp; tom">
+          <span class="aula__data">Planejada</span>
+          <h3 class="aula__titulo">O que sua voz comunica além das palavras</h3>
+          <span class="aula__tema">Voz &amp; Tom</span>
+          <span class="aula__selo aula__selo--planejada">Planejada</span>
+        </li>
+        <li class="aula" data-temporada="3" data-status="planned"
+            data-texto="empatia cognitiva x empatia emocional na pratica psicologia">
+          <span class="aula__data">Planejada</span>
+          <h3 class="aula__titulo">Empatia cognitiva x empatia emocional na prática</h3>
+          <span class="aula__tema">Psicologia</span>
+          <span class="aula__selo aula__selo--planejada">Planejada</span>
+        </li>
+        <li class="aula" data-temporada="3" data-status="planned"
+            data-texto="como se comunicar bem em momentos de conflito gestao de conflito">
+          <span class="aula__data">Planejada</span>
+          <h3 class="aula__titulo">Como se comunicar bem em momentos de conflito</h3>
+          <span class="aula__tema">Gestão de Conflito</span>
+          <span class="aula__selo aula__selo--planejada">Planejada</span>
+        </li>
+        <li class="aula" data-temporada="3" data-status="planned"
+            data-texto="a escuta que cura, comunicacao como forma de acolhimento acolhimento">
+          <span class="aula__data">Planejada</span>
+          <h3 class="aula__titulo">A escuta que cura, comunicação como forma de acolhimento</h3>
+          <span class="aula__tema">Acolhimento</span>
+          <span class="aula__selo aula__selo--planejada">Planejada</span>
+        </li>
+        <li class="aula" data-temporada="L" data-status="recorded"
+            data-texto="produtividade nao e organizacao produtividade">
+          <span class="aula__data">Aula 1</span>
+          <h3 class="aula__titulo">Produtividade não é organização</h3>
+          <span class="aula__tema">Produtividade</span>
+          <span class="aula__selo aula__selo--gravada">Gravada</span>
+        </li>
+        <li class="aula" data-temporada="L" data-status="recorded"
+            data-texto="a importancia da sobriedade ao decidir decisao">
+          <span class="aula__data">Aula 2</span>
+          <h3 class="aula__titulo">A importância da sobriedade ao decidir</h3>
+          <span class="aula__tema">Decisão</span>
+          <span class="aula__selo aula__selo--gravada">Gravada</span>
+        </li>
+        <li class="aula" data-temporada="L" data-status="recorded"
+            data-texto="todo mundo se sente frustrado. todo mundo tem medo de fracassar. [reflexao] fracasso &amp; medo">
+          <span class="aula__data">Aula 3</span>
+          <h3 class="aula__titulo">Todo mundo se sente frustrado. Todo mundo tem medo de fracassar. [reflexão]</h3>
+          <span class="aula__tema">Fracasso &amp; Medo</span>
+          <span class="aula__selo aula__selo--gravada">Gravada</span>
+        </li>
+        <li class="aula" data-temporada="L" data-status="recorded"
+            data-texto="consuma arte de verdade repertorio">
+          <span class="aula__data">Aula 4</span>
+          <h3 class="aula__titulo">Consuma arte de verdade</h3>
+          <span class="aula__tema">Repertório</span>
+          <span class="aula__selo aula__selo--gravada">Gravada</span>
+        </li>
+        <li class="aula" data-temporada="L" data-status="recorded"
+            data-texto="sprint - como ficar bom em varias coisas diferentes generalismo">
+          <span class="aula__data">Aula 5</span>
+          <h3 class="aula__titulo">SPRINT - Como ficar bom em várias coisas diferentes</h3>
+          <span class="aula__tema">Generalismo</span>
+          <span class="aula__selo aula__selo--gravada">Gravada</span>
+        </li>
+        <li class="aula" data-temporada="L" data-status="recorded"
+            data-texto="brain fog cognicao">
+          <span class="aula__data">Aula 6</span>
+          <h3 class="aula__titulo">Brain fog</h3>
+          <span class="aula__tema">Cognição</span>
+          <span class="aula__selo aula__selo--gravada">Gravada</span>
+        </li>
+        <li class="aula" data-temporada="L" data-status="recorded"
+            data-texto="a psicologia sobre conhecer pessoas relacoes">
+          <span class="aula__data">Aula 7</span>
+          <h3 class="aula__titulo">A psicologia sobre conhecer pessoas</h3>
+          <span class="aula__tema">Relações</span>
+          <span class="aula__selo aula__selo--gravada">Gravada</span>
+        </li>
+        <li class="aula" data-temporada="L" data-status="recorded"
+            data-texto="sobre o fracasso e a melhoria constante fracasso &amp; melhoria">
+          <span class="aula__data">Aula 8</span>
+          <h3 class="aula__titulo">Sobre o fracasso e a melhoria constante</h3>
+          <span class="aula__tema">Fracasso &amp; Melhoria</span>
+          <span class="aula__selo aula__selo--gravada">Gravada</span>
+        </li>
+        <li class="aula" data-temporada="L" data-status="recorded"
+            data-texto="a curiosidade e sua aliada, mas voce precisa desperta-la curiosidade">
+          <span class="aula__data">Aula 9</span>
+          <h3 class="aula__titulo">A curiosidade é sua aliada, mas você precisa despertá-la</h3>
+          <span class="aula__tema">Curiosidade</span>
+          <span class="aula__selo aula__selo--gravada">Gravada</span>
+        </li>
+        <li class="aula" data-temporada="L" data-status="recorded"
+            data-texto="vontade de potencia intelectual filosofia pratica">
+          <span class="aula__data">Aula 10</span>
+          <h3 class="aula__titulo">Vontade de potência intelectual</h3>
+          <span class="aula__tema">Filosofia Prática</span>
+          <span class="aula__selo aula__selo--gravada">Gravada</span>
+        </li>
+        <li class="aula" data-temporada="L" data-status="recorded"
+            data-texto="torne-se um especialista generalista generalismo">
+          <span class="aula__data">Aula 11</span>
+          <h3 class="aula__titulo">Torne-se um especialista generalista</h3>
+          <span class="aula__tema">Generalismo</span>
+          <span class="aula__selo aula__selo--gravada">Gravada</span>
+        </li>
+        <li class="aula" data-temporada="L" data-status="recorded"
+            data-texto="pense mais uma vez pensamento critico">
+          <span class="aula__data">Aula 12</span>
+          <h3 class="aula__titulo">Pense mais uma vez</h3>
+          <span class="aula__tema">Pensamento Crítico</span>
+          <span class="aula__selo aula__selo--gravada">Gravada</span>
+        </li>
+        <li class="aula" data-temporada="L" data-status="recorded"
+            data-texto="maldito talento talento &amp; esforco">
+          <span class="aula__data">Aula 13</span>
+          <h3 class="aula__titulo">Maldito talento</h3>
+          <span class="aula__tema">Talento &amp; Esforço</span>
+          <span class="aula__selo aula__selo--gravada">Gravada</span>
+        </li>
+        <li class="aula" data-temporada="L" data-status="recorded"
+            data-texto="minha visao sobre fazer dinheiro dinheiro &amp; carreira">
+          <span class="aula__data">Aula 14</span>
+          <h3 class="aula__titulo">Minha visão sobre fazer dinheiro</h3>
+          <span class="aula__tema">Dinheiro &amp; Carreira</span>
+          <span class="aula__selo aula__selo--gravada">Gravada</span>
+        </li>
+        <li class="aula" data-temporada="D" data-status="recorded"
+            data-texto="semana 1 — desafio das 16 semanas estudo de caso">
+          <span class="aula__data">09/08/2026</span>
+          <h3 class="aula__titulo">Semana 1 — Desafio das 16 semanas</h3>
+          <span class="aula__tema">Estudo de Caso</span>
+          <span class="aula__selo aula__selo--gravada">Gravada</span>
+        </li>
+        <li class="aula" data-temporada="D" data-status="planned"
+            data-texto="semana 2 — desafio das 16 semanas estudo de caso">
+          <span class="aula__data">Planejada</span>
+          <h3 class="aula__titulo">Semana 2 — Desafio das 16 semanas</h3>
+          <span class="aula__tema">Estudo de Caso</span>
+          <span class="aula__selo aula__selo--planejada">Planejada</span>
+        </li>
+        <li class="aula" data-temporada="D" data-status="planned"
+            data-texto="semana 3 — desafio das 16 semanas estudo de caso">
+          <span class="aula__data">Planejada</span>
+          <h3 class="aula__titulo">Semana 3 — Desafio das 16 semanas</h3>
+          <span class="aula__tema">Estudo de Caso</span>
+          <span class="aula__selo aula__selo--planejada">Planejada</span>
+        </li>
+        <li class="aula" data-temporada="D" data-status="planned"
+            data-texto="semana 4 — desafio das 16 semanas estudo de caso">
+          <span class="aula__data">Planejada</span>
+          <h3 class="aula__titulo">Semana 4 — Desafio das 16 semanas</h3>
+          <span class="aula__tema">Estudo de Caso</span>
+          <span class="aula__selo aula__selo--planejada">Planejada</span>
+        </li>
+        <li class="aula" data-temporada="D" data-status="recorded"
+            data-texto="semana 5 — desafio das 16 semanas estudo de caso">
+          <span class="aula__data">06/09/2026</span>
+          <h3 class="aula__titulo">Semana 5 — Desafio das 16 semanas</h3>
+          <span class="aula__tema">Estudo de Caso</span>
+          <span class="aula__selo aula__selo--gravada">Gravada</span>
+        </li>
+        <li class="aula" data-temporada="D" data-status="planned"
+            data-texto="semana 6 — desafio das 16 semanas estudo de caso">
+          <span class="aula__data">Planejada</span>
+          <h3 class="aula__titulo">Semana 6 — Desafio das 16 semanas</h3>
+          <span class="aula__tema">Estudo de Caso</span>
+          <span class="aula__selo aula__selo--planejada">Planejada</span>
+        </li>
+        <li class="aula" data-temporada="D" data-status="planned"
+            data-texto="semana 7 — desafio das 16 semanas estudo de caso">
+          <span class="aula__data">Planejada</span>
+          <h3 class="aula__titulo">Semana 7 — Desafio das 16 semanas</h3>
+          <span class="aula__tema">Estudo de Caso</span>
+          <span class="aula__selo aula__selo--planejada">Planejada</span>
+        </li>
+        <li class="aula" data-temporada="D" data-status="planned"
+            data-texto="semana 8 — desafio das 16 semanas estudo de caso">
+          <span class="aula__data">Planejada</span>
+          <h3 class="aula__titulo">Semana 8 — Desafio das 16 semanas</h3>
+          <span class="aula__tema">Estudo de Caso</span>
+          <span class="aula__selo aula__selo--planejada">Planejada</span>
+        </li>
+        <li class="aula" data-temporada="D" data-status="planned"
+            data-texto="semana 9 — desafio das 16 semanas estudo de caso">
+          <span class="aula__data">Planejada</span>
+          <h3 class="aula__titulo">Semana 9 — Desafio das 16 semanas</h3>
+          <span class="aula__tema">Estudo de Caso</span>
+          <span class="aula__selo aula__selo--planejada">Planejada</span>
+        </li>
+        <li class="aula" data-temporada="D" data-status="planned"
+            data-texto="semana 10 — desafio das 16 semanas estudo de caso">
+          <span class="aula__data">Planejada</span>
+          <h3 class="aula__titulo">Semana 10 — Desafio das 16 semanas</h3>
+          <span class="aula__tema">Estudo de Caso</span>
+          <span class="aula__selo aula__selo--planejada">Planejada</span>
+        </li>
+        <li class="aula" data-temporada="D" data-status="planned"
+            data-texto="semana 11 — desafio das 16 semanas estudo de caso">
+          <span class="aula__data">Planejada</span>
+          <h3 class="aula__titulo">Semana 11 — Desafio das 16 semanas</h3>
+          <span class="aula__tema">Estudo de Caso</span>
+          <span class="aula__selo aula__selo--planejada">Planejada</span>
+        </li>
+        <li class="aula" data-temporada="D" data-status="planned"
+            data-texto="semana 12 — desafio das 16 semanas estudo de caso">
+          <span class="aula__data">Planejada</span>
+          <h3 class="aula__titulo">Semana 12 — Desafio das 16 semanas</h3>
+          <span class="aula__tema">Estudo de Caso</span>
+          <span class="aula__selo aula__selo--planejada">Planejada</span>
+        </li>
+        <li class="aula" data-temporada="D" data-status="planned"
+            data-texto="semana 13 — desafio das 16 semanas estudo de caso">
+          <span class="aula__data">Planejada</span>
+          <h3 class="aula__titulo">Semana 13 — Desafio das 16 semanas</h3>
+          <span class="aula__tema">Estudo de Caso</span>
+          <span class="aula__selo aula__selo--planejada">Planejada</span>
+        </li>
+        <li class="aula" data-temporada="D" data-status="planned"
+            data-texto="semana 14 — desafio das 16 semanas estudo de caso">
+          <span class="aula__data">Planejada</span>
+          <h3 class="aula__titulo">Semana 14 — Desafio das 16 semanas</h3>
+          <span class="aula__tema">Estudo de Caso</span>
+          <span class="aula__selo aula__selo--planejada">Planejada</span>
+        </li>
+        <li class="aula" data-temporada="D" data-status="planned"
+            data-texto="semana 15 — desafio das 16 semanas estudo de caso">
+          <span class="aula__data">Planejada</span>
+          <h3 class="aula__titulo">Semana 15 — Desafio das 16 semanas</h3>
+          <span class="aula__tema">Estudo de Caso</span>
+          <span class="aula__selo aula__selo--planejada">Planejada</span>
+        </li>
+        <li class="aula" data-temporada="D" data-status="planned"
+            data-texto="semana 16 — desafio das 16 semanas estudo de caso">
+          <span class="aula__data">Planejada</span>
+          <h3 class="aula__titulo">Semana 16 — Desafio das 16 semanas</h3>
+          <span class="aula__tema">Estudo de Caso</span>
+          <span class="aula__selo aula__selo--planejada">Planejada</span>
+        </li>
+      </ul>
+
+      <p class="catalogo__vazio" data-vazio hidden>Nenhuma aula encontrada com esses filtros.</p>
+      <div class="catalogo__mais">
+        <button type="button" class="btn btn--linha" data-mais hidden>Ver mais aulas</button>
+      </div>
+    </div>
+
+    <div class="catalogo__cta">
+      <a class="btn btn--ouro btn--grande" href="https://pay.kiwify.com.br/OizrzJd">Entrar na Academia</a>
+      <p class="catalogo__nota">R$ 30 por mês · acesso às 54 aulas já gravadas e às novas
+        publicadas enquanto a assinatura estiver ativa. As 84 planejadas ainda não estão
+        disponíveis.</p>
+    </div>
+  </section>
+  <!-- TEMPORADAS:FIM -->
 
   <!-- ════ 6. QUEM CONDUZ ════ -->
   <section id="julio" class="cena faixa">

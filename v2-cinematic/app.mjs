@@ -540,6 +540,99 @@ function fatiar(el, porLetra = true) {
   }
 }
 
+/* ---------- 9c. O catálogo: abas, busca, situação e "ver mais" ----------
+   As 138 aulas já estão no HTML. Aqui só escondemos o que não bate com o
+   filtro — quem chega sem JS vê a lista inteira, que é o pior caso aceitável
+   (muito texto), nunca uma lista vazia. */
+{
+  const raiz = document.querySelector('[data-catalogo]');
+  if (raiz) {
+    const aulas = [...raiz.querySelectorAll('.aula')];
+    const abas = [...raiz.querySelectorAll('[data-temporada]')].filter(e => e.tagName === 'BUTTON');
+    const pilulas = [...raiz.querySelectorAll('[data-status]')].filter(e => e.tagName === 'BUTTON');
+    const busca = raiz.querySelector('[data-busca]');
+    const conta = raiz.querySelector('[data-conta]');
+    const vazio = raiz.querySelector('[data-vazio]');
+    const mais = raiz.querySelector('[data-mais]');
+
+    const LOTE = 12;
+    let temporada = 'all', situacao = 'all', termo = '', limite = LOTE;
+
+    // Mesma normalização usada ao gerar o data-texto: sem acento, minúsculo.
+    const planificar = (s) => s.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().trim();
+
+    function aplicar() {
+      let achadas = 0, mostradas = 0, gravadas = 0;
+      for (const el of aulas) {
+        const bate =
+          (temporada === 'all' || el.dataset.temporada === temporada) &&
+          (situacao === 'all' || el.dataset.status === situacao) &&
+          (!termo || el.dataset.texto.includes(termo));
+        if (bate) {
+          achadas++;
+          if (el.dataset.status === 'recorded') gravadas++;
+        }
+        const visivel = bate && achadas <= limite;
+        el.classList.toggle('esta-oculta', !visivel);
+        if (visivel) mostradas++;
+      }
+
+      const plural = achadas === 1 ? 'aula' : 'aulas';
+      conta.textContent = achadas === 0
+        ? 'Nenhuma aula com esses filtros.'
+        : `Mostrando ${mostradas} de ${achadas} ${plural} · ${gravadas} gravadas, ${achadas - gravadas} planejadas`;
+      vazio.hidden = achadas !== 0;
+      mais.hidden = achadas <= limite;
+      mais.textContent = `Ver mais ${Math.min(LOTE, achadas - limite)} aulas`;
+    }
+
+    for (const b of abas) {
+      b.addEventListener('click', () => {
+        temporada = b.dataset.temporada;
+        limite = LOTE;
+        abas.forEach(o => {
+          const eu = o === b;
+          o.classList.toggle('is-ativa', eu);
+          o.setAttribute('aria-pressed', String(eu));
+        });
+        aplicar();
+      });
+    }
+
+    for (const b of pilulas) {
+      b.addEventListener('click', () => {
+        situacao = b.dataset.status;
+        limite = LOTE;
+        pilulas.forEach(o => {
+          const eu = o === b;
+          o.classList.toggle('is-ativa', eu);
+          o.setAttribute('aria-pressed', String(eu));
+        });
+        aplicar();
+      });
+    }
+
+    let espera = 0;
+    busca.addEventListener('input', () => {
+      clearTimeout(espera);
+      espera = setTimeout(() => { termo = planificar(busca.value); limite = LOTE; aplicar(); }, 140);
+    });
+    tempos.push(() => clearTimeout(espera));
+
+    mais.addEventListener('click', () => {
+      const antes = aulas.filter(el => !el.classList.contains('esta-oculta')).length;
+      limite += LOTE;
+      aplicar();
+      // Leva o foco para a primeira aula recém-revelada, senão quem usa
+      // teclado volta para o começo da lista a cada clique.
+      const nova = aulas.filter(el => !el.classList.contains('esta-oculta'))[antes];
+      if (nova) { nova.setAttribute('tabindex', '-1'); nova.focus({ preventScroll: true }); }
+    });
+
+    aplicar();
+  }
+}
+
 /* ---------- 10. O vídeo das comissões só toca quando visível ------------ */
 {
   const videos = [...document.querySelectorAll('.carta video')];

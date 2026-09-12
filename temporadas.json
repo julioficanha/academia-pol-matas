@@ -1,0 +1,1106 @@
+[
+ {
+  "id": "1",
+  "season": "0",
+  "date": "2026.01.16",
+  "title": "O novo jeito de consumir cursos online",
+  "status": "recorded",
+  "category": "Generalismo & Método"
+ },
+ {
+  "id": "2",
+  "season": "0",
+  "date": "2026.01.17",
+  "title": "Ansiedade e identidade",
+  "status": "recorded",
+  "category": "Psicologia & Mente"
+ },
+ {
+  "id": "3",
+  "season": "0",
+  "date": "2026.01.19",
+  "title": "Taxonomia de conhecimento",
+  "status": "recorded",
+  "category": "Aprendizagem"
+ },
+ {
+  "id": "4",
+  "season": "0",
+  "date": "2026.01.20",
+  "title": "Homem",
+  "status": "recorded",
+  "category": "Masculinidade & Identidade"
+ },
+ {
+  "id": "5",
+  "season": "0",
+  "date": "2026.01.22",
+  "title": "Um meio para controlar pensamentos",
+  "status": "recorded",
+  "category": "Controle da Mente"
+ },
+ {
+  "id": "6",
+  "season": "0",
+  "date": "2026.01.23",
+  "title": "Desistência e disciplina",
+  "status": "recorded",
+  "category": "Disciplina & Resiliência"
+ },
+ {
+  "id": "7",
+  "season": "0",
+  "date": "2026.01.30",
+  "title": "A chave do sucesso",
+  "status": "recorded",
+  "category": "Filosofia Prática"
+ },
+ {
+  "id": "8",
+  "season": "0",
+  "date": "2026.01.31",
+  "title": "Esporte coletivo",
+  "status": "recorded",
+  "category": "Rotina & Corpo"
+ },
+ {
+  "id": "9",
+  "season": "0",
+  "date": "2026.02.03",
+  "title": "Para os que sempre desistem",
+  "status": "recorded",
+  "category": "Persistência"
+ },
+ {
+  "id": "10",
+  "season": "0",
+  "date": "2026.02.11",
+  "title": "Sobre as metas de ano-novo e o mês de março",
+  "status": "recorded",
+  "category": "Metas & Planejamento"
+ },
+ {
+  "id": "11",
+  "season": "0",
+  "date": "2026.02.20",
+  "title": "Quer ser bom? Aprenda a ser ruim",
+  "status": "recorded",
+  "category": "Medo de Errar"
+ },
+ {
+  "id": "12",
+  "season": "0",
+  "date": "2026.02.25",
+  "title": "e-mail: múltiplos interesses e estudos",
+  "status": "recorded",
+  "category": "Generalismo"
+ },
+ {
+  "id": "13",
+  "season": "0",
+  "date": "2026.03.04",
+  "title": "Como falar.",
+  "status": "recorded",
+  "category": "Comunicação"
+ },
+ {
+  "id": "14",
+  "season": "0",
+  "date": "2026.03.06",
+  "title": "Como ser bem-sucedido?",
+  "status": "recorded",
+  "category": "Sucesso & Carreira"
+ },
+ {
+  "id": "15",
+  "season": "0",
+  "date": "2026.03.10",
+  "title": "Seja útil e cale a boca",
+  "status": "recorded",
+  "category": "Postura & Ação"
+ },
+ {
+  "id": "16",
+  "season": "0",
+  "date": "2026.03.13",
+  "title": "Como se sentir motivado",
+  "status": "recorded",
+  "category": "Motivação"
+ },
+ {
+  "id": "17",
+  "season": "0",
+  "date": "2026.03.20",
+  "title": "Vença o medo de errar",
+  "status": "recorded",
+  "category": "Autoestima"
+ },
+ {
+  "id": "18",
+  "season": "0",
+  "date": "2026.03.22",
+  "title": "Veja quando estiver paralisado com a rotina",
+  "status": "recorded",
+  "category": "Rotina & Foco"
+ },
+ {
+  "id": "19",
+  "season": "0",
+  "date": "2026.03.24",
+  "title": "Aprenda a resolver problemas",
+  "status": "recorded",
+  "category": "Resolução de Problemas"
+ },
+ {
+  "id": "20",
+  "season": "0",
+  "date": "2026.04.03",
+  "title": "A arte de memorizar tudo",
+  "status": "recorded",
+  "category": "Memória"
+ },
+ {
+  "id": "21",
+  "season": "0",
+  "date": "2026.04.20",
+  "title": "Dias difíceis/momentos difíceis",
+  "status": "recorded",
+  "category": "Inteligência Emocional"
+ },
+ {
+  "id": "22",
+  "season": "0",
+  "date": "2026.04.29",
+  "title": "Apenas continue.",
+  "status": "recorded",
+  "category": "Disciplina"
+ },
+ {
+  "id": "23",
+  "season": "0",
+  "date": "2026.05.10",
+  "title": "Aprenda o mínimo de IA (eu tô implorando)",
+  "status": "recorded",
+  "category": "Inteligência Artificial"
+ },
+ {
+  "id": "24",
+  "season": "0",
+  "date": "2026.06.09",
+  "title": "Decida onde você vai falhar",
+  "status": "recorded",
+  "category": "Tomada de Decisão"
+ },
+ {
+  "id": "25",
+  "season": "0",
+  "date": "2026.06.20",
+  "title": "A importância da leveza",
+  "status": "recorded",
+  "category": "Equilíbrio"
+ },
+ {
+  "id": "101",
+  "season": "1",
+  "date": "2026.08.18",
+  "title": "Tudo que você precisa saber",
+  "status": "recorded",
+  "category": "Produtividade Base"
+ },
+ {
+  "id": "102",
+  "season": "1",
+  "date": "2026.08.20",
+  "title": "NÃO DECLARE DERROTA",
+  "status": "recorded",
+  "category": "Mindset & Foco"
+ },
+ {
+  "id": "103",
+  "season": "1",
+  "date": "2026.08.20",
+  "title": "O que os disciplinados temem e falta em você",
+  "status": "recorded",
+  "category": "Disciplina"
+ },
+ {
+  "id": "104",
+  "season": "1",
+  "date": "2026.08.25",
+  "title": "Um papo cabeça para quem pensar em mudar o percurso.",
+  "status": "recorded",
+  "category": "Tomada de Decisão"
+ },
+ {
+  "id": "105",
+  "season": "1",
+  "date": "2026.09.02",
+  "title": "Moedor de sonhos e crise existencial",
+  "status": "recorded",
+  "category": "Crise Existencial"
+ },
+ {
+  "id": "106",
+  "season": "1",
+  "date": "2026.09.02",
+  "title": "Aos ex-prodígios",
+  "status": "recorded",
+  "category": "Autoestima"
+ },
+ {
+  "id": "107",
+  "season": "1",
+  "date": "2026.09.02",
+  "title": "Como fazer o desafio? [A PLANILHA]",
+  "status": "recorded",
+  "category": "Execução & Ferramentas"
+ },
+ {
+  "id": "108",
+  "season": "1",
+  "date": "2026.09.03",
+  "title": "Por que fazer o desafio?",
+  "status": "recorded",
+  "category": "Propósito"
+ },
+ {
+  "id": "109",
+  "season": "1",
+  "date": "2026.09.03",
+  "title": "Autoestima [Conquistas x Autopercepção de valor]",
+  "status": "recorded",
+  "category": "Psicologia"
+ },
+ {
+  "id": "110",
+  "season": "1",
+  "date": "2026.09.03",
+  "title": "MOTIVAÇÃO: O neurotransmissor do sucesso ou do fracasso.",
+  "status": "recorded",
+  "category": "Neurociência & Motivação"
+ },
+ {
+  "id": "111",
+  "season": "1",
+  "date": "2026.09.03",
+  "title": "Vôos de galinha",
+  "status": "recorded",
+  "category": "Consistência"
+ },
+ {
+  "id": "112",
+  "season": "1",
+  "date": "2026.09.07",
+  "title": "Gestão de energia, não gestão de tempo",
+  "status": "recorded",
+  "category": "Energia & Foco"
+ },
+ {
+  "id": "113",
+  "season": "1",
+  "date": "2026.09.07",
+  "title": "O mito da força de vontade",
+  "status": "recorded",
+  "category": "Psicologia & Hábito"
+ },
+ {
+  "id": "114",
+  "season": "1",
+  "date": "Planejada",
+  "title": "Por que você procrastina o que mais importa",
+  "status": "planned",
+  "category": "Procrastinação"
+ },
+ {
+  "id": "115",
+  "season": "1",
+  "date": "Planejada",
+  "title": "A raiz emocional da procrastinação",
+  "status": "planned",
+  "category": "Emoção & Ação"
+ },
+ {
+  "id": "116",
+  "season": "1",
+  "date": "Planejada",
+  "title": "Sono, o produtor de resultado invisível",
+  "status": "planned",
+  "category": "Recuperação & Sono"
+ },
+ {
+  "id": "117",
+  "season": "1",
+  "date": "Planejada",
+  "title": "Foco é um músculo, não um dom",
+  "status": "planned",
+  "category": "Atenção"
+ },
+ {
+  "id": "118",
+  "season": "1",
+  "date": "Planejada",
+  "title": "A tirania do multitarefa",
+  "status": "planned",
+  "category": "Brain fog"
+ },
+ {
+  "id": "119",
+  "season": "1",
+  "date": "Planejada",
+  "title": "Como priorizar quando tudo parece urgente",
+  "status": "planned",
+  "category": "Prioridades"
+ },
+ {
+  "id": "120",
+  "season": "1",
+  "date": "Planejada",
+  "title": "Metas vagas geram esforço vago",
+  "status": "planned",
+  "category": "Metas"
+ },
+ {
+  "id": "121",
+  "season": "1",
+  "date": "Planejada",
+  "title": "O poder da fricção: facilite o certo, dificulte o errado",
+  "status": "planned",
+  "category": "Arquitetura de Escolha"
+ },
+ {
+  "id": "122",
+  "season": "1",
+  "date": "Planejada",
+  "title": "Autorregulação: o adulto que observa você mesmo",
+  "status": "planned",
+  "category": "Autorregulação"
+ },
+ {
+  "id": "123",
+  "season": "1",
+  "date": "Planejada",
+  "title": "Energia mental tem picos e vales, descubra os seus",
+  "status": "planned",
+  "category": "Ritmo Biológico"
+ },
+ {
+  "id": "124",
+  "season": "1",
+  "date": "Planejada",
+  "title": "Descanso não é o oposto de produtividade",
+  "status": "planned",
+  "category": "Recuperação"
+ },
+ {
+  "id": "125",
+  "season": "1",
+  "date": "Planejada",
+  "title": "Como recomeçar depois de uma semana perdida",
+  "status": "planned",
+  "category": "Resiliência"
+ },
+ {
+  "id": "126",
+  "season": "1",
+  "date": "Planejada",
+  "title": "O perfeccionismo que trava mais do que ajuda",
+  "status": "planned",
+  "category": "Perfeccionismo"
+ },
+ {
+  "id": "127",
+  "season": "1",
+  "date": "Planejada",
+  "title": "Feedback: o combustível que ninguém pede",
+  "status": "planned",
+  "category": "Feedback"
+ },
+ {
+  "id": "128",
+  "season": "1",
+  "date": "Planejada",
+  "title": "A diferença entre estar ocupado e estar avançando",
+  "status": "planned",
+  "category": "Progresso Real"
+ },
+ {
+  "id": "129",
+  "season": "1",
+  "date": "Planejada",
+  "title": "Ambientes que produzem por você",
+  "status": "planned",
+  "category": "Ambiente"
+ },
+ {
+  "id": "201",
+  "season": "2",
+  "date": "Planejada",
+  "title": "Aprender rápido é aprender errado",
+  "status": "planned",
+  "category": "Aprendizagem"
+ },
+ {
+  "id": "202",
+  "season": "2",
+  "date": "Planejada",
+  "title": "Repetição espaçada: o segredo que a escola não te contou",
+  "status": "planned",
+  "category": "Memória"
+ },
+ {
+  "id": "203",
+  "season": "2",
+  "date": "Planejada",
+  "title": "Prática deliberada, o que separa amador de especialista",
+  "status": "planned",
+  "category": "Talento & Prática"
+ },
+ {
+  "id": "204",
+  "season": "2",
+  "date": "Planejada",
+  "title": "A curiosidade que a escola matou em você",
+  "status": "planned",
+  "category": "Curiosidade"
+ },
+ {
+  "id": "205",
+  "season": "2",
+  "date": "Planejada",
+  "title": "Metacognição: pensar sobre o seu próprio pensar",
+  "status": "planned",
+  "category": "Metacognição"
+ },
+ {
+  "id": "206",
+  "season": "2",
+  "date": "Planejada",
+  "title": "Por que você esquece quase tudo que estuda",
+  "status": "planned",
+  "category": "Retenção"
+ },
+ {
+  "id": "207",
+  "season": "2",
+  "date": "Planejada",
+  "title": "O erro é a matéria-prima do aprendizado",
+  "status": "planned",
+  "category": "Medo de Errar"
+ },
+ {
+  "id": "208",
+  "season": "2",
+  "date": "Planejada",
+  "title": "Ensinar é a forma mais rápida de aprender",
+  "status": "planned",
+  "category": "Técnica Feynman"
+ },
+ {
+  "id": "209",
+  "season": "2",
+  "date": "Planejada",
+  "title": "Como ler um livro difícil sem desistir",
+  "status": "planned",
+  "category": "Leitura Profunda"
+ },
+ {
+  "id": "210",
+  "season": "2",
+  "date": "Planejada",
+  "title": "A ilusão de competência: por que reler não é estudar",
+  "status": "planned",
+  "category": "Estudos"
+ },
+ {
+  "id": "211",
+  "season": "2",
+  "date": "Planejada",
+  "title": "Interleaving: misturar assuntos para aprender melhor",
+  "status": "planned",
+  "category": "Generalismo"
+ },
+ {
+  "id": "212",
+  "season": "2",
+  "date": "Planejada",
+  "title": "Sono e consolidação de memória",
+  "status": "planned",
+  "category": "Neurociência"
+ },
+ {
+  "id": "213",
+  "season": "2",
+  "date": "Planejada",
+  "title": "Como fazer perguntas melhores que as respostas",
+  "status": "planned",
+  "category": "Pensamento Crítico"
+ },
+ {
+  "id": "214",
+  "season": "2",
+  "date": "Planejada",
+  "title": "Transferência de conhecimento entre áreas diferentes",
+  "status": "planned",
+  "category": "Polimatia"
+ },
+ {
+  "id": "215",
+  "season": "2",
+  "date": "Planejada",
+  "title": "O generalista aprende diferente do especialista",
+  "status": "planned",
+  "category": "Generalismo"
+ },
+ {
+  "id": "216",
+  "season": "2",
+  "date": "Planejada",
+  "title": "Motivação para aprender vem depois de entender o porquê",
+  "status": "planned",
+  "category": "Motivação"
+ },
+ {
+  "id": "217",
+  "season": "2",
+  "date": "Planejada",
+  "title": "Mapas mentais funcionam, mas não do jeito que você pensa",
+  "status": "planned",
+  "category": "Organização"
+ },
+ {
+  "id": "218",
+  "season": "2",
+  "date": "Planejada",
+  "title": "A zona de desenvolvimento proximal: o ponto certo de desafio",
+  "status": "planned",
+  "category": "Desafio"
+ },
+ {
+  "id": "219",
+  "season": "2",
+  "date": "Planejada",
+  "title": "Como estudar quando o assunto é chato",
+  "status": "planned",
+  "category": "Disciplina"
+ },
+ {
+  "id": "220",
+  "season": "2",
+  "date": "Planejada",
+  "title": "Aprendizagem ativa x aprendizagem passiva",
+  "status": "planned",
+  "category": "Métodos"
+ },
+ {
+  "id": "221",
+  "season": "2",
+  "date": "Planejada",
+  "title": "O papel da dificuldade produtiva no aprendizado real",
+  "status": "planned",
+  "category": "Resiliência"
+ },
+ {
+  "id": "222",
+  "season": "2",
+  "date": "Planejada",
+  "title": "Como organizar o conhecimento em rede, não em lista",
+  "status": "planned",
+  "category": "Taxonomia"
+ },
+ {
+  "id": "223",
+  "season": "2",
+  "date": "Planejada",
+  "title": "A curva do esquecimento e como driblar ela",
+  "status": "planned",
+  "category": "Memória"
+ },
+ {
+  "id": "224",
+  "season": "2",
+  "date": "Planejada",
+  "title": "Aprender em público, o compromisso que acelera o processo",
+  "status": "planned",
+  "category": "Prestação de Contas"
+ },
+ {
+  "id": "225",
+  "season": "2",
+  "date": "Planejada",
+  "title": "Quando parar de estudar teoria e começar a praticar",
+  "status": "planned",
+  "category": "Prática"
+ },
+ {
+  "id": "226",
+  "season": "2",
+  "date": "Planejada",
+  "title": "Vieses cognitivos que sabotam seu julgamento",
+  "status": "planned",
+  "category": "Psicologia"
+ },
+ {
+  "id": "227",
+  "season": "2",
+  "date": "Planejada",
+  "title": "O papel do cochilo e do sono na criatividade e no insight",
+  "status": "planned",
+  "category": "Insight"
+ },
+ {
+  "id": "301",
+  "season": "3",
+  "date": "Planejada",
+  "title": "Falar bem não é o mesmo que comunicar bem",
+  "status": "planned",
+  "category": "Comunicação Base"
+ },
+ {
+  "id": "302",
+  "season": "3",
+  "date": "Planejada",
+  "title": "A primeira impressão se forma antes de você abrir a boca",
+  "status": "planned",
+  "category": "Linguagem Corporal"
+ },
+ {
+  "id": "303",
+  "season": "3",
+  "date": "Planejada",
+  "title": "Escuta ativa, o ingrediente que falta em toda conversa",
+  "status": "planned",
+  "category": "Escuta"
+ },
+ {
+  "id": "304",
+  "season": "3",
+  "date": "Planejada",
+  "title": "Por que ninguém lembra o que você disse, só como fez sentir",
+  "status": "planned",
+  "category": "Psicologia"
+ },
+ {
+  "id": "305",
+  "season": "3",
+  "date": "Planejada",
+  "title": "Persuasão não é manipulação, é clareza com intenção",
+  "status": "planned",
+  "category": "Persuasão"
+ },
+ {
+  "id": "306",
+  "season": "3",
+  "date": "Planejada",
+  "title": "O silêncio como ferramenta de comunicação",
+  "status": "planned",
+  "category": "Oratória"
+ },
+ {
+  "id": "307",
+  "season": "3",
+  "date": "Planejada",
+  "title": "Como discordar sem destruir a relação",
+  "status": "planned",
+  "category": "Relações"
+ },
+ {
+  "id": "308",
+  "season": "3",
+  "date": "Planejada",
+  "title": "Storytelling, por que histórias convencem mais que dados",
+  "status": "planned",
+  "category": "Storytelling"
+ },
+ {
+  "id": "309",
+  "season": "3",
+  "date": "Planejada",
+  "title": "Comunicação não violenta na prática",
+  "status": "planned",
+  "category": "CNV"
+ },
+ {
+  "id": "310",
+  "season": "3",
+  "date": "Planejada",
+  "title": "Linguagem corporal, o que o seu corpo diz antes de você",
+  "status": "planned",
+  "category": "Expressão"
+ },
+ {
+  "id": "311",
+  "season": "3",
+  "date": "Planejada",
+  "title": "Como simplificar uma ideia complexa sem perder profundidade",
+  "status": "planned",
+  "category": "Clareza"
+ },
+ {
+  "id": "312",
+  "season": "3",
+  "date": "Planejada",
+  "title": "O erro de comunicar para impressionar, não para conectar",
+  "status": "planned",
+  "category": "Conexão"
+ },
+ {
+  "id": "313",
+  "season": "3",
+  "date": "Planejada",
+  "title": "Perguntas que abrem conversas, perguntas que fecham",
+  "status": "planned",
+  "category": "Perguntas"
+ },
+ {
+  "id": "314",
+  "season": "3",
+  "date": "Planejada",
+  "title": "Como dar feedback que a pessoa realmente escuta",
+  "status": "planned",
+  "category": "Feedback"
+ },
+ {
+  "id": "315",
+  "season": "3",
+  "date": "Planejada",
+  "title": "A arte de pedir o que você quer sem rodeios",
+  "status": "planned",
+  "category": "Assertividade"
+ },
+ {
+  "id": "316",
+  "season": "3",
+  "date": "Planejada",
+  "title": "Comunicação assertiva, nem passivo, nem agressivo",
+  "status": "planned",
+  "category": "Postura"
+ },
+ {
+  "id": "317",
+  "season": "3",
+  "date": "Planejada",
+  "title": "Como ler o clima emocional de uma conversa",
+  "status": "planned",
+  "category": "Empatia"
+ },
+ {
+  "id": "318",
+  "season": "3",
+  "date": "Planejada",
+  "title": "Falar em público, o medo que todo mundo finge não ter",
+  "status": "planned",
+  "category": "Falar em Público"
+ },
+ {
+  "id": "319",
+  "season": "3",
+  "date": "Planejada",
+  "title": "O poder do nome próprio numa conversa",
+  "status": "planned",
+  "category": "Relações"
+ },
+ {
+  "id": "320",
+  "season": "3",
+  "date": "Planejada",
+  "title": "Como encerrar uma conversa difícil sem deixar mágoa",
+  "status": "planned",
+  "category": "Conflitos"
+ },
+ {
+  "id": "321",
+  "season": "3",
+  "date": "Planejada",
+  "title": "A diferença entre informar e convencer",
+  "status": "planned",
+  "category": "Persuasão"
+ },
+ {
+  "id": "322",
+  "season": "3",
+  "date": "Planejada",
+  "title": "Comunicação escrita, por que clareza é gentileza",
+  "status": "planned",
+  "category": "Escrita"
+ },
+ {
+  "id": "323",
+  "season": "3",
+  "date": "Planejada",
+  "title": "Como negociar sem tratar o outro como adversário",
+  "status": "planned",
+  "category": "Negociação"
+ },
+ {
+  "id": "324",
+  "season": "3",
+  "date": "Planejada",
+  "title": "O que sua voz comunica além das palavras",
+  "status": "planned",
+  "category": "Voz & Tom"
+ },
+ {
+  "id": "325",
+  "season": "3",
+  "date": "Planejada",
+  "title": "Empatia cognitiva x empatia emocional na prática",
+  "status": "planned",
+  "category": "Psicologia"
+ },
+ {
+  "id": "326",
+  "season": "3",
+  "date": "Planejada",
+  "title": "Como se comunicar bem em momentos de conflito",
+  "status": "planned",
+  "category": "Gestão de Conflito"
+ },
+ {
+  "id": "327",
+  "season": "3",
+  "date": "Planejada",
+  "title": "A escuta que cura, comunicação como forma de acolhimento",
+  "status": "planned",
+  "category": "Acolhimento"
+ },
+ {
+  "id": "401",
+  "season": "L",
+  "date": "Aula 1",
+  "title": "Produtividade não é organização",
+  "status": "recorded",
+  "category": "Produtividade"
+ },
+ {
+  "id": "402",
+  "season": "L",
+  "date": "Aula 2",
+  "title": "A importância da sobriedade ao decidir",
+  "status": "recorded",
+  "category": "Decisão"
+ },
+ {
+  "id": "403",
+  "season": "L",
+  "date": "Aula 3",
+  "title": "Todo mundo se sente frustrado. Todo mundo tem medo de fracassar. [reflexão]",
+  "status": "recorded",
+  "category": "Fracasso & Medo"
+ },
+ {
+  "id": "404",
+  "season": "L",
+  "date": "Aula 4",
+  "title": "Consuma arte de verdade",
+  "status": "recorded",
+  "category": "Repertório"
+ },
+ {
+  "id": "405",
+  "season": "L",
+  "date": "Aula 5",
+  "title": "SPRINT - Como ficar bom em várias coisas diferentes",
+  "status": "recorded",
+  "category": "Generalismo"
+ },
+ {
+  "id": "406",
+  "season": "L",
+  "date": "Aula 6",
+  "title": "Brain fog",
+  "status": "recorded",
+  "category": "Cognição"
+ },
+ {
+  "id": "407",
+  "season": "L",
+  "date": "Aula 7",
+  "title": "A psicologia sobre conhecer pessoas",
+  "status": "recorded",
+  "category": "Relações"
+ },
+ {
+  "id": "408",
+  "season": "L",
+  "date": "Aula 8",
+  "title": "Sobre o fracasso e a melhoria constante",
+  "status": "recorded",
+  "category": "Fracasso & Melhoria"
+ },
+ {
+  "id": "409",
+  "season": "L",
+  "date": "Aula 9",
+  "title": "A curiosidade é sua aliada, mas você precisa despertá-la",
+  "status": "recorded",
+  "category": "Curiosidade"
+ },
+ {
+  "id": "410",
+  "season": "L",
+  "date": "Aula 10",
+  "title": "Vontade de potência intelectual",
+  "status": "recorded",
+  "category": "Filosofia Prática"
+ },
+ {
+  "id": "411",
+  "season": "L",
+  "date": "Aula 11",
+  "title": "Torne-se um especialista generalista",
+  "status": "recorded",
+  "category": "Generalismo"
+ },
+ {
+  "id": "412",
+  "season": "L",
+  "date": "Aula 12",
+  "title": "Pense mais uma vez",
+  "status": "recorded",
+  "category": "Pensamento Crítico"
+ },
+ {
+  "id": "413",
+  "season": "L",
+  "date": "Aula 13",
+  "title": "Maldito talento",
+  "status": "recorded",
+  "category": "Talento & Esforço"
+ },
+ {
+  "id": "414",
+  "season": "L",
+  "date": "Aula 14",
+  "title": "Minha visão sobre fazer dinheiro",
+  "status": "recorded",
+  "category": "Dinheiro & Carreira"
+ },
+ {
+  "id": "501",
+  "season": "D",
+  "date": "09/08/2026",
+  "title": "Semana 1 — Desafio das 16 semanas",
+  "status": "recorded",
+  "category": "Estudo de Caso"
+ },
+ {
+  "id": "502",
+  "season": "D",
+  "date": "16/08/2026",
+  "title": "Semana 2 — Desafio das 16 semanas",
+  "status": "planned",
+  "category": "Estudo de Caso"
+ },
+ {
+  "id": "503",
+  "season": "D",
+  "date": "23/08/2026",
+  "title": "Semana 3 — Desafio das 16 semanas",
+  "status": "planned",
+  "category": "Estudo de Caso"
+ },
+ {
+  "id": "504",
+  "season": "D",
+  "date": "30/08/2026",
+  "title": "Semana 4 — Desafio das 16 semanas",
+  "status": "planned",
+  "category": "Estudo de Caso"
+ },
+ {
+  "id": "505",
+  "season": "D",
+  "date": "06/09/2026",
+  "title": "Semana 5 — Desafio das 16 semanas",
+  "status": "recorded",
+  "category": "Estudo de Caso"
+ },
+ {
+  "id": "506",
+  "season": "D",
+  "date": "13/09/2026",
+  "title": "Semana 6 — Desafio das 16 semanas",
+  "status": "planned",
+  "category": "Estudo de Caso"
+ },
+ {
+  "id": "507",
+  "season": "D",
+  "date": "20/09/2026",
+  "title": "Semana 7 — Desafio das 16 semanas",
+  "status": "planned",
+  "category": "Estudo de Caso"
+ },
+ {
+  "id": "508",
+  "season": "D",
+  "date": "27/09/2026",
+  "title": "Semana 8 — Desafio das 16 semanas",
+  "status": "planned",
+  "category": "Estudo de Caso"
+ },
+ {
+  "id": "509",
+  "season": "D",
+  "date": "04/10/2026",
+  "title": "Semana 9 — Desafio das 16 semanas",
+  "status": "planned",
+  "category": "Estudo de Caso"
+ },
+ {
+  "id": "510",
+  "season": "D",
+  "date": "11/10/2026",
+  "title": "Semana 10 — Desafio das 16 semanas",
+  "status": "planned",
+  "category": "Estudo de Caso"
+ },
+ {
+  "id": "511",
+  "season": "D",
+  "date": "18/10/2026",
+  "title": "Semana 11 — Desafio das 16 semanas",
+  "status": "planned",
+  "category": "Estudo de Caso"
+ },
+ {
+  "id": "512",
+  "season": "D",
+  "date": "25/10/2026",
+  "title": "Semana 12 — Desafio das 16 semanas",
+  "status": "planned",
+  "category": "Estudo de Caso"
+ },
+ {
+  "id": "513",
+  "season": "D",
+  "date": "01/11/2026",
+  "title": "Semana 13 — Desafio das 16 semanas",
+  "status": "planned",
+  "category": "Estudo de Caso"
+ },
+ {
+  "id": "514",
+  "season": "D",
+  "date": "08/11/2026",
+  "title": "Semana 14 — Desafio das 16 semanas",
+  "status": "planned",
+  "category": "Estudo de Caso"
+ },
+ {
+  "id": "515",
+  "season": "D",
+  "date": "15/11/2026",
+  "title": "Semana 15 — Desafio das 16 semanas",
+  "status": "planned",
+  "category": "Estudo de Caso"
+ },
+ {
+  "id": "516",
+  "season": "D",
+  "date": "22/11/2026",
+  "title": "Semana 16 — Desafio das 16 semanas",
+  "status": "planned",
+  "category": "Estudo de Caso"
+ }
+]
